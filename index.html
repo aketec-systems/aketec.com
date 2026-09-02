@@ -3,540 +3,208 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AKETEC — Public-Sector Records &amp; Data Engineering</title>
-<meta name="description" content="AKETEC is a Texas software engineering firm that modernizes public-sector records and data systems so agencies can adopt AI safely, with verifiable, tamper-evident audit trails.">
+<title>AKETEC — Cut What Your Operations Cost to Run</title>
+<meta name="description" content="AKETEC is a Texas engineering firm. We measure what your workflows actually cost, then cut that cost with AI automation, custom software, and digital infrastructure.">
 
 <link rel="icon" type="image/svg+xml" href="assets/logo/mark-primary.svg">
 <link rel="canonical" href="https://aketec.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="AKETEC — Public-Sector Records &amp; Data Engineering">
-<meta property="og:description" content="AKETEC is a Texas software engineering firm that modernizes public-sector records and data systems so agencies can adopt AI safely, with verifiable, tamper-evident audit trails.">
+<meta property="og:title" content="AKETEC — Cut What Your Operations Cost to Run">
+<meta property="og:description" content="AKETEC is a Texas engineering firm. We measure what your workflows actually cost, then cut that cost with AI automation, custom software, and digital infrastructure.">
 <meta property="og:url" content="https://aketec.com/">
 <meta property="og:image" content="https://aketec.com/assets/img/og-image.png">
-
-<!-- ================================================================
-     AKETEC — single-file website
-
-     TODO: fields still marked with the dotted brass "placeholder"
-     style (UEI, CAGE code, street address, telephone, additional
-     registrations) are not yet available. Fill them in as they land —
-     see each <span class="placeholder"> in the Corporate Data and
-     Contact sections below.
-     ================================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500;600&display=swap">
 
 <style>
-:root {
-  --paper:      #F5F2EA;
-  --paper-2:    #EDE9DE;
-  --card:       #FFFDF8;
-  --ink:        #17150F;
-  --ink-2:      #3D3930;
-  --slate:      #5F5A4C;
-  --rule:       #DDD6C6;
-  --rule-soft:  #E8E2D5;
-  --brass:      #8A6520;
-  --brass-lit:  #A8813A;
-  --brass-soft: #EFE6D2;
-  --shadow:     0 1px 2px rgba(23,21,15,.05), 0 10px 30px -20px rgba(23,21,15,.35);
+:root{
+  --paper:#F5F2EA; --paper-2:#ECEEEB; --card:#FFFDF8;
+  --ink:#17150F; --ink-2:#3D3930; --slate:#5F5A4C;
+  --rule:#DDD6C6; --rule-soft:#E8E2D5;
+  --brass:#966D22; --brass-lit:#A8813A; --brass-soft:#EFE6D2;
+  --shadow:0 1px 2px rgba(23,21,15,.05), 0 8px 24px -16px rgba(23,21,15,.25);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper:      #131210;
-    --paper-2:    #1A1815;
-    --card:       #1C1A16;
-    --ink:        #EFEBE0;
-    --ink-2:      #CAC4B5;
-    --slate:      #9A9384;
-    --rule:       #2E2A23;
-    --rule-soft:  #24211B;
-    --brass:      #C9A055;
-    --brass-lit:  #DDB871;
-    --brass-soft: #2A2317;
-    --shadow:     0 1px 2px rgba(0,0,0,.5), 0 10px 30px -20px rgba(0,0,0,.9);
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131210; --paper-2:#1A1815; --card:#1C1A16;
+    --ink:#EFEBE0; --ink-2:#CAC4B5; --slate:#9A9384;
+    --rule:#2E2A23; --rule-soft:#24211B;
+    --brass:#C9A055; --brass-lit:#DDB871; --brass-soft:#2A2317;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
   }
 }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+body{margin:0;background:var(--paper);color:var(--ink);
+     font-family:"Source Serif 4",Georgia,serif;font-size:17.5px;line-height:1.62;
+     -webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,nav,.btn,.eyebrow,.wordmark{font-family:"Archivo","Helvetica Neue",Arial,sans-serif}
+.mono,.datum dd,.code,.placeholder,.tag{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+p{margin:0 0 1.05rem;max-width:66ch}p:last-child{margin-bottom:0}
+a{color:var(--brass);text-underline-offset:2px}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
+.shell{max-width:1080px;margin:0 auto;padding:0 30px}
+.eyebrow{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+         color:var(--brass);display:block;margin-bottom:.85rem}
+.placeholder{color:var(--brass);font-size:.92em;border-bottom:1px dotted var(--brass);white-space:nowrap}
 
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: .001ms !important; transition-duration: .001ms !important; }
-}
-
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: "Source Serif 4", Georgia, serif;
-  font-size: 17.5px;
-  line-height: 1.62;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3, h4, nav, .btn, .eyebrow, th, .wordmark {
-  font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
-}
-.mono, .datum dd, .code, .placeholder {
-  font-family: "JetBrains Mono", ui-monospace, Menlo, monospace;
-}
-
-p { margin: 0 0 1.05rem; max-width: 66ch; }
-p:last-child { margin-bottom: 0; }
-
-a { color: var(--brass); text-underline-offset: 2px; }
-a:focus-visible, .btn:focus-visible {
-  outline: 2px solid var(--brass);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
-.shell { max-width: 1080px; margin: 0 auto; padding: 0 30px; }
-
-.eyebrow {
-  font-size: .7rem;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--brass);
-  display: block;
-  margin-bottom: .85rem;
-}
-
-.placeholder {
-  color: var(--brass);
-  font-size: .92em;
-  border-bottom: 1px dotted var(--brass);
-  white-space: nowrap;
-}
-
-/* ---------- top bar + header ---------- */
-
-.topline { height: 3px; background: var(--brass); }
-
-header.site {
-  border-bottom: 1px solid var(--rule);
-  position: sticky;
-  top: 0;
-  background: color-mix(in srgb, var(--paper) 92%, transparent);
-  backdrop-filter: blur(10px);
-  z-index: 50;
-}
-
-.headrow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  flex-wrap: wrap;
-}
-
-.wordmark {
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  text-decoration: none;
-  color: var(--ink);
-  order: 1;
-}
-.wordmark svg { display: block; flex: none; }
-.wordmark .mk-brass { stroke: var(--brass); }
-.wordmark .name {
-  font-weight: 800;
-  font-size: 1.16rem;
-  letter-spacing: .17em;
-}
-.wordmark .sub {
-  display: block;
-  font-family: "JetBrains Mono", monospace;
-  font-size: .58rem;
-  letter-spacing: .13em;
-  color: var(--slate);
-  text-transform: uppercase;
-  margin-top: 2px;
-  font-weight: 400;
-}
-
-nav.primary {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  font-size: .82rem;
-  font-weight: 600;
-  letter-spacing: .01em;
-  order: 2;
-}
-nav.primary a {
-  color: var(--ink-2);
-  text-decoration: none;
-  padding: 4px 0;
-  border-bottom: 1.5px solid transparent;
-}
-nav.primary a:hover { color: var(--ink); border-bottom-color: var(--brass); }
-
-.btn {
-  display: inline-block;
-  font-size: .82rem;
-  font-weight: 700;
-  letter-spacing: .02em;
-  padding: 11px 20px;
-  border-radius: 2px;
-  text-decoration: none;
-  border: 1.5px solid var(--brass);
-  color: var(--brass);
-  background: transparent;
-  transition: background .15s ease, color .15s ease;
-}
-.btn:hover { background: var(--brass); color: var(--paper); }
-.btn.solid { background: var(--brass); color: var(--paper); }
-.btn.solid:hover { background: var(--brass-lit); border-color: var(--brass-lit); }
-.headrow .btn.solid { order: 3; }
+.topline{height:3px;background:var(--brass)}
+header.site{border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:50;
+  background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px)}
+.headrow{display:flex;align-items:center;justify-content:space-between;gap:24px;
+         padding:16px 0;flex-wrap:wrap}
+.wordmark{display:block;text-decoration:none;color:var(--ink);line-height:0;order:1}
+.wordmark .lockup{display:block;height:34px;width:auto;overflow:visible}
+.wordmark .lk-brass{stroke:var(--brass)}
+.wordmark .lk-name{fill:currentColor;font-family:"Archivo",sans-serif;font-weight:800}
+.wordmark .lk-sub{fill:var(--slate);font-family:"JetBrains Mono",monospace;font-weight:500}
+@media (max-width:560px){.wordmark .lockup{height:26px}}
+nav.primary{display:flex;align-items:center;gap:24px;font-size:.82rem;font-weight:600;order:2}
+nav.primary a{color:var(--ink-2);text-decoration:none;padding:4px 0;border-bottom:1.5px solid transparent}
+nav.primary a:hover{color:var(--ink);border-bottom-color:var(--brass)}
+.btn{display:inline-block;font-size:.82rem;font-weight:700;padding:11px 20px;border-radius:2px;
+     text-decoration:none;border:1.5px solid var(--brass);color:var(--brass);background:transparent;
+     transition:background .15s ease,color .15s ease}
+.btn:hover{background:var(--brass);color:var(--paper)}
+.btn.solid{background:var(--brass);color:var(--paper)}
+.btn.solid:hover{background:var(--brass-lit);border-color:var(--brass-lit)}
+.headrow .btn.solid{order:3}
 
 /* ---------- mobile nav toggle ---------- */
 
-.nav-toggle {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.nav-toggle{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
+  clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.nav-toggle-btn{display:none;order:4;align-items:center;justify-content:center;width:38px;height:38px;
+  flex:none;border:1.5px solid var(--rule);border-radius:2px;color:var(--ink);cursor:pointer}
+.nav-toggle-btn .bar{transition:transform .15s ease,opacity .15s ease;transform-box:fill-box;transform-origin:center}
+.nav-toggle:focus-visible + .nav-toggle-btn{outline:2px solid var(--brass);outline-offset:2px}
+.nav-toggle:checked + .nav-toggle-btn .bar-1{transform:translateY(4px) rotate(45deg)}
+.nav-toggle:checked + .nav-toggle-btn .bar-2{opacity:0}
+.nav-toggle:checked + .nav-toggle-btn .bar-3{transform:translateY(-4px) rotate(-45deg)}
+
+@media (max-width:960px){
+  .nav-toggle-btn{display:inline-flex}
+  nav.primary{display:none;order:5;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;
+    margin-top:14px;padding-top:10px;border-top:1px solid var(--rule)}
+  .nav-toggle:checked ~ nav.primary{display:flex}
+  nav.primary a{padding:12px 2px;border-bottom:1px solid var(--rule-soft)}
 }
 
-.nav-toggle-btn {
-  display: none;
-  order: 4;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  flex: none;
-  border: 1.5px solid var(--rule);
-  border-radius: 2px;
-  color: var(--ink);
-  cursor: pointer;
-}
-.nav-toggle-btn .bar {
-  transition: transform .15s ease, opacity .15s ease;
-  transform-box: fill-box;
-  transform-origin: center;
-}
-.nav-toggle:focus-visible + .nav-toggle-btn {
-  outline: 2px solid var(--brass);
-  outline-offset: 2px;
-}
-.nav-toggle:checked + .nav-toggle-btn .bar-1 { transform: translateY(4px) rotate(45deg); }
-.nav-toggle:checked + .nav-toggle-btn .bar-2 { opacity: 0; }
-.nav-toggle:checked + .nav-toggle-btn .bar-3 { transform: translateY(-4px) rotate(-45deg); }
+.hero{padding:80px 0 64px;border-bottom:1px solid var(--rule)}
+.hero h1{font-size:clamp(2rem,4.4vw,3rem);line-height:1.1;letter-spacing:-.026em;
+         font-weight:800;margin:0 0 1.1rem;max-width:19ch;text-wrap:balance}
+.hero h1 .hl{color:var(--brass)}
+.hero .lede{font-size:1.16rem;line-height:1.55;color:var(--ink-2);max-width:60ch;margin-bottom:2rem}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
 
-@media (max-width: 860px) {
-  .nav-toggle-btn { display: inline-flex; }
+.creds{background:var(--paper-2);border-bottom:1px solid var(--rule);padding:22px 0}
+.creds ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 34px;
+  font-family:"JetBrains Mono",monospace;font-size:.73rem;letter-spacing:.04em;
+  color:var(--slate);text-transform:uppercase}
+.creds li{display:flex;align-items:center;gap:9px}
+.creds li::before{content:"";width:5px;height:5px;background:var(--brass);transform:rotate(45deg);flex:none}
 
-  nav.primary {
-    display: none;
-    order: 5;
-    flex-basis: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    margin-top: 14px;
-    padding-top: 10px;
-    border-top: 1px solid var(--rule);
-  }
-  .nav-toggle:checked ~ nav.primary { display: flex; }
-  nav.primary a {
-    padding: 12px 2px;
-    border-bottom: 1px solid var(--rule-soft);
-  }
-}
+section.band{padding:70px 0;border-bottom:1px solid var(--rule)}
+.sec-head{margin-bottom:38px;max-width:62ch}
+.sec-head h2{font-size:clamp(1.5rem,3vw,2rem);line-height:1.16;letter-spacing:-.02em;
+             font-weight:700;margin:0 0 .7rem;text-wrap:balance}
+.sec-head p{color:var(--slate);margin:0}
 
-/* ---------- hero ---------- */
+.aud{display:grid;gap:18px}
+@media (min-width:820px){.aud{grid-template-columns:1fr 1fr}}
+.audience{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--brass);
+          border-radius:2px;padding:28px;box-shadow:var(--shadow);display:flex;
+          flex-direction:column;gap:12px}
+.audience h3{font-size:1.18rem;font-weight:700;margin:0;letter-spacing:-.012em}
+.audience .who{font-family:"JetBrains Mono",monospace;font-size:.71rem;letter-spacing:.09em;
+               text-transform:uppercase;color:var(--brass)}
+.audience p{font-size:.98rem;color:var(--ink-2);margin:0}
+.audience ul{list-style:none;padding:0;margin:6px 0 0;display:grid;gap:7px;
+             border-top:1px solid var(--rule-soft);padding-top:14px}
+.audience li{font-size:.93rem;color:var(--ink-2);padding-left:16px;position:relative}
+.audience li::before{content:"—";position:absolute;left:0;color:var(--brass)}
+.audience .foot{margin-top:auto;padding-top:16px}
 
-.hero { padding: 84px 0 68px; border-bottom: 1px solid var(--rule); }
+.caps{display:grid;gap:18px}
+@media (min-width:800px){.caps{grid-template-columns:1fr 1fr}}
+.cap{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--brass);
+     border-radius:2px;padding:26px;box-shadow:var(--shadow)}
+.cap h3{font-size:1.06rem;font-weight:700;margin:0 0 .6rem;letter-spacing:-.01em}
+.cap p{font-size:.96rem;color:var(--ink-2);margin-bottom:.9rem}
+.cap ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule-soft);
+        padding-top:13px;display:grid;gap:6px}
+.cap li{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--slate);
+        padding-left:15px;position:relative}
+.cap li::before{content:"—";position:absolute;left:0;color:var(--brass)}
 
-.hero h1 {
-  font-size: clamp(2rem, 4.4vw, 3rem);
-  line-height: 1.12;
-  letter-spacing: -.025em;
-  font-weight: 800;
-  margin: 0 0 1.1rem;
-  max-width: 20ch;
-  text-wrap: balance;
-}
-.hero h1 .hl { color: var(--brass); }
+.engagements{display:grid;gap:16px}
+@media (min-width:820px){.engagements{grid-template-columns:repeat(3,1fr)}}
+.eng{border:1px solid var(--rule);border-radius:2px;padding:24px 22px;background:var(--card);
+     display:flex;flex-direction:column;gap:11px}
+.eng.lead{border-color:var(--brass);border-width:1.5px}
+.eng .term{font-family:"JetBrains Mono",monospace;font-size:.71rem;letter-spacing:.07em;
+           text-transform:uppercase;color:var(--brass);font-weight:600}
+.eng h3{font-size:1rem;margin:0;line-height:1.3}
+.eng p{font-size:.93rem;color:var(--ink-2);margin:0}
+.eng .out{margin-top:auto;padding-top:13px;border-top:1px solid var(--rule-soft);
+          font-size:.84rem;color:var(--slate)}
+.eng .out b{color:var(--ink);font-weight:600;font-family:"Archivo",sans-serif;font-size:.72rem;
+            letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:3px}
 
-.hero .lede {
-  font-size: 1.18rem;
-  line-height: 1.55;
-  color: var(--ink-2);
-  max-width: 58ch;
-  margin-bottom: 2rem;
-}
+.diffs{display:grid}
+.diff{display:grid;grid-template-columns:44px 1fr;gap:20px;padding:24px 0;
+      border-bottom:1px solid var(--rule-soft);align-items:start}
+.diff:last-child{border-bottom:none}
+.diff .mk{font-family:"JetBrains Mono",monospace;font-size:.72rem;font-weight:600;
+          color:var(--brass);padding-top:5px}
+.diff h3{font-size:1rem;margin:0 0 .35rem}
+.diff p{font-size:.96rem;color:var(--ink-2);margin:0;max-width:68ch}
+@media (max-width:560px){.diff{grid-template-columns:1fr;gap:6px}}
 
-.cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+section.company{background:var(--ink);color:var(--paper);padding:70px 0}
+section.company .sec-head h2{color:var(--paper)}
+section.company .sec-head p{color:color-mix(in srgb,var(--paper) 62%,transparent)}
+section.company .eyebrow{color:var(--brass-lit)}
+section.company a{color:var(--brass-lit)}
+.datagrid{display:grid;gap:0 40px;border-top:1px solid color-mix(in srgb,var(--paper) 22%,transparent)}
+@media (min-width:720px){.datagrid{grid-template-columns:1fr 1fr}}
+.datum{display:grid;gap:3px;padding:15px 0;margin:0;
+       border-bottom:1px solid color-mix(in srgb,var(--paper) 13%,transparent)}
+.datum dt{font-family:"Archivo",sans-serif;font-size:.66rem;letter-spacing:.13em;
+          text-transform:uppercase;font-weight:700;
+          color:color-mix(in srgb,var(--paper) 55%,transparent)}
+.datum dd{margin:0;font-size:.88rem;color:var(--paper);font-variant-numeric:tabular-nums;line-height:1.5}
+section.company .placeholder{color:var(--brass-lit);border-bottom-color:var(--brass-lit)}
+.codes-note{margin-top:30px;font-size:.84rem;
+            color:color-mix(in srgb,var(--paper) 60%,transparent);max-width:68ch}
 
-/* ---------- credential strip ---------- */
+.contact-grid{display:grid;gap:34px}
+@media (min-width:760px){.contact-grid{grid-template-columns:1.15fr 1fr}}
+.contact-lines{display:grid;gap:18px;margin-top:6px}
+.cline{display:grid;gap:3px}
+.cline .lab{font-family:"Archivo",sans-serif;font-size:.66rem;letter-spacing:.13em;
+            text-transform:uppercase;font-weight:700;color:var(--slate)}
+.cline .val{font-size:1rem;color:var(--ink)}
+.cline .val a{text-decoration:none}
+.cline .val a:hover{text-decoration:underline}
 
-.creds {
-  background: var(--paper-2);
-  border-bottom: 1px solid var(--rule);
-  padding: 22px 0;
-}
-.creds ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 34px;
-  font-family: "JetBrains Mono", monospace;
-  font-size: .74rem;
-  letter-spacing: .04em;
-  color: var(--slate);
-  text-transform: uppercase;
-}
-.creds li { display: flex; align-items: center; gap: 9px; }
-.creds li::before {
-  content: "";
-  width: 5px; height: 5px;
-  background: var(--brass);
-  transform: rotate(45deg);
-  flex: none;
-}
-
-/* ---------- sections ---------- */
-
-section.band { padding: 72px 0; border-bottom: 1px solid var(--rule); }
-
-.sec-head { margin-bottom: 40px; max-width: 62ch; }
-.sec-head h2 {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  line-height: 1.16;
-  letter-spacing: -.02em;
-  font-weight: 700;
-  margin: 0 0 .7rem;
-  text-wrap: balance;
-}
-.sec-head p { color: var(--slate); margin: 0; }
-
-/* ---------- capabilities ---------- */
-
-.caps { display: grid; gap: 18px; }
-@media (min-width: 800px) { .caps { grid-template-columns: 1fr 1fr; } }
-
-.cap {
-  background: var(--card);
-  border: 1px solid var(--rule);
-  border-top: 3px solid var(--brass);
-  border-radius: 2px;
-  padding: 26px 26px 28px;
-  box-shadow: var(--shadow);
-}
-.cap h3 {
-  font-size: 1.08rem;
-  letter-spacing: -.01em;
-  font-weight: 700;
-  margin: 0 0 .6rem;
-}
-.cap p { font-size: .96rem; color: var(--ink-2); margin-bottom: .9rem; }
-.cap ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid var(--rule-soft);
-  padding-top: 13px;
-  display: grid;
-  gap: 6px;
-}
-.cap li {
-  font-family: "JetBrains Mono", monospace;
-  font-size: .73rem;
-  color: var(--slate);
-  letter-spacing: .01em;
-  padding-left: 15px;
-  position: relative;
-}
-.cap li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  color: var(--brass);
-}
-
-/* ---------- engagements ---------- */
-
-.engagements { display: grid; gap: 16px; }
-@media (min-width: 820px) { .engagements { grid-template-columns: repeat(3, 1fr); } }
-
-.eng {
-  border: 1px solid var(--rule);
-  border-radius: 2px;
-  padding: 24px 22px;
-  background: var(--card);
-  display: flex;
-  flex-direction: column;
-  gap: 11px;
-}
-.eng .term {
-  font-family: "JetBrains Mono", monospace;
-  font-size: .71rem;
-  letter-spacing: .07em;
-  text-transform: uppercase;
-  color: var(--brass);
-  font-weight: 600;
-}
-.eng h3 { font-size: 1rem; margin: 0; letter-spacing: -.008em; line-height: 1.3; }
-.eng p { font-size: .93rem; color: var(--ink-2); margin: 0; }
-.eng .out {
-  margin-top: auto;
-  padding-top: 13px;
-  border-top: 1px solid var(--rule-soft);
-  font-size: .84rem;
-  color: var(--slate);
-}
-.eng .out b { color: var(--ink); font-weight: 600; font-family: "Archivo", sans-serif; font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; display: block; margin-bottom: 3px; }
-
-/* ---------- differentiators ---------- */
-
-.diffs { display: grid; gap: 0; }
-.diff {
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 20px;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--rule-soft);
-  align-items: start;
-}
-.diff:last-child { border-bottom: none; }
-.diff .mk {
-  font-family: "JetBrains Mono", monospace;
-  font-size: .72rem;
-  font-weight: 600;
-  color: var(--brass);
-  padding-top: 5px;
-}
-.diff h3 { font-size: 1rem; margin: 0 0 .35rem; letter-spacing: -.008em; }
-.diff p { font-size: .96rem; color: var(--ink-2); margin: 0; max-width: 68ch; }
-@media (max-width: 560px) {
-  .diff { grid-template-columns: 1fr; gap: 6px; }
-}
-
-/* ---------- corporate data (inverted band) ---------- */
-
-section.company {
-  background: var(--ink);
-  color: var(--paper);
-  padding: 72px 0;
-}
-section.company .sec-head h2 { color: var(--paper); }
-section.company .sec-head p { color: color-mix(in srgb, var(--paper) 62%, transparent); }
-section.company .eyebrow { color: var(--brass-lit); }
-section.company a { color: var(--brass-lit); }
-
-.datagrid {
-  display: grid;
-  gap: 0 40px;
-  border-top: 1px solid color-mix(in srgb, var(--paper) 22%, transparent);
-}
-@media (min-width: 720px) { .datagrid { grid-template-columns: 1fr 1fr; } }
-
-.datum {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3px;
-  padding: 15px 0;
-  border-bottom: 1px solid color-mix(in srgb, var(--paper) 13%, transparent);
-  margin: 0;
-}
-.datum dt {
-  font-family: "Archivo", sans-serif;
-  font-size: .67rem;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--paper) 55%, transparent);
-}
-.datum dd {
-  margin: 0;
-  font-size: .89rem;
-  color: var(--paper);
-  font-variant-numeric: tabular-nums;
-  line-height: 1.5;
-}
-section.company .placeholder { color: var(--brass-lit); border-bottom-color: var(--brass-lit); }
-
-.codes-note {
-  margin-top: 30px;
-  font-size: .84rem;
-  color: color-mix(in srgb, var(--paper) 60%, transparent);
-  max-width: 68ch;
-}
-
-/* ---------- contact ---------- */
-
-.contact-grid { display: grid; gap: 34px; }
-@media (min-width: 760px) { .contact-grid { grid-template-columns: 1.15fr 1fr; } }
-
-.contact-lines { display: grid; gap: 18px; margin-top: 6px; }
-.cline { display: grid; gap: 3px; }
-.cline .lab {
-  font-family: "Archivo", sans-serif;
-  font-size: .67rem;
-  letter-spacing: .13em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--slate);
-}
-.cline .val { font-size: 1rem; color: var(--ink); }
-.cline .val a { text-decoration: none; }
-.cline .val a:hover { text-decoration: underline; }
-
-/* ---------- footer ---------- */
-
-footer.site {
-  padding: 34px 0 44px;
-  border-top: 1px solid var(--rule);
-  font-size: .8rem;
-  color: var(--slate);
-}
-.footrow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 30px;
-  align-items: center;
-  justify-content: space-between;
-}
-footer.site .legal { font-family: "JetBrains Mono", monospace; font-size: .72rem; letter-spacing: .02em; }
+footer.site{padding:34px 0 44px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--slate)}
+.footrow{display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center;justify-content:space-between}
+footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
 </style>
 </head>
 
 <body>
-
 <div class="topline"></div>
 
 <header class="site">
   <div class="shell headrow">
     <a class="wordmark" href="#top" aria-label="AKETEC home">
-      <svg width="31" height="31" viewBox="0 0 31 31" fill="none" aria-hidden="true">
-        <path d="M1.9 1.9 L21.4 1.9 L29.1 9.6 L29.1 29.1 L1.9 29.1 Z" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linejoin="miter"/>
-        <path d="M7.8 10.2 H22" stroke="currentColor" stroke-width="2.3"/>
-        <path d="M12.1 15.5 H24.8" class="mk-brass" stroke-width="2.3"/>
-        <path d="M7.8 20.8 H18" stroke="currentColor" stroke-width="2.3"/>
-      </svg>
-      <span>
-        <span class="name">AKETEC</span>
-        <span class="sub">Records &amp; data engineering</span>
-      </span>
+      <svg class="lockup" viewBox="0.62 -1.0 470 70.85" role="img" aria-label="AKETEC — AI automation, custom software, digital infrastructure"><g transform="translate(0,-1.62)"><path d="M 4.33,4.33 L 49.74,4.33 L 67.76,22.35 L 67.76,67.76 L 4.33,67.76 Z" fill="none" stroke="currentColor" stroke-width="5.41" stroke-linejoin="miter"/><path d="M 18.02,23.79 L 51.18,23.79" stroke="currentColor" stroke-width="5.41"/><path d="M 28.12,36.05 L 57.67,36.05" class="lk-brass" stroke-width="5.41"/><path d="M 18.02,48.3 L 41.81,48.3" stroke="currentColor" stroke-width="5.41"/></g><text x="96.42" y="39.85" class="lk-name" font-size="58" letter-spacing="7.25">AKETEC</text><text x="99.03" y="68.85" class="lk-sub" font-size="16.24" letter-spacing="3.31">AUTOMATION · SOFTWARE · DATA</text></svg>
     </a>
 
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="site-nav">
@@ -548,13 +216,14 @@ footer.site .legal { font-family: "JetBrains Mono", monospace; font-size: .72rem
       </svg>
     </label>
 
-    <a class="btn solid" href="assets/docs/aketec-capability-statement.pdf" target="_blank" rel="noopener">Capability statement (PDF)</a>
+    <a class="btn solid" href="#contact">Book a conversation</a>
 
     <nav class="primary" id="site-nav" aria-label="Primary">
-      <a href="#capabilities">Capabilities</a>
-      <a href="#engagements">Engagements</a>
+      <a href="#who">Who we help</a>
+      <a href="#services">Services</a>
+      <a href="#engagements">Start here</a>
       <a href="#approach">Why AKETEC</a>
-      <a href="#company">Company Data</a>
+      <a href="#company">Company data</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -562,87 +231,124 @@ footer.site .legal { font-family: "JetBrains Mono", monospace; font-size: .72rem
 
 <main id="top">
 
-  <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="shell">
-      <span class="eyebrow">Texas · Public-sector software engineering</span>
-      <h1>Records systems that can <span class="hl">prove</span> what they hold.</h1>
-      <p class="lede">AKETEC modernizes public-sector records and data systems so agencies can adopt AI safely — building platforms where every record carries a verifiable, tamper-evident audit trail.</p>
+      <span class="eyebrow">Texas · Engineering, automation &amp; software</span>
+      <h1>What is your workflow <span class="hl">actually costing you</span>?</h1>
+      <p class="lede">Most of what your operations cost isn't the software — it's the hours around it. The re-keying between systems, the workarounds, the report somebody rebuilds every month. AKETEC measures that cost, then engineers it out with AI automation, custom software, and the infrastructure to hold it together.</p>
       <div class="cta-row">
-        <a class="btn solid" href="#engagements">See what you can buy</a>
-        <a class="btn" href="#company">Corporate data &amp; codes</a>
+        <a class="btn solid" href="#engagements">Find out what it costs</a>
+        <a class="btn" href="#services">What we do</a>
       </div>
     </div>
   </section>
 
-  <!-- ============ CREDENTIAL STRIP ============ -->
   <div class="creds">
     <div class="shell">
       <ul>
-        <li>Small business</li>
-        <li>Texas-based · No offshore delivery</li>
-        <li>Founded 2024</li>
+        <li>Hutto, Texas</li>
+        <li>15+ years engineering</li>
         <li>Fixed-price engagements</li>
-        <li>US persons only</li>
+        <li>US-based delivery</li>
+        <li>Small business</li>
       </ul>
     </div>
   </div>
 
-  <!-- ============ CAPABILITIES ============ -->
-  <section class="band" id="capabilities">
+  <!-- ============ WHO WE HELP ============ -->
+  <section class="band" id="who">
     <div class="shell">
       <div class="sec-head">
-        <span class="eyebrow">Core competencies</span>
-        <h2>Four things we do, and nothing we don't</h2>
-        <p>Every engagement starts from the same premise: an agency cannot govern, secure, or automate data it cannot account for. We fix the accounting first.</p>
+        <span class="eyebrow">Who we help</span>
+        <h2>Two kinds of client, one kind of problem</h2>
+        <p>A growing company and a public agency describe it differently, but underneath it is the same thing: people doing work that a system should be doing, in tools that don't talk to each other.</p>
+      </div>
+
+      <div class="aud">
+        <article class="audience">
+          <span class="who">For businesses</span>
+          <h3>You've added tools. The admin didn't go down.</h3>
+          <p>Every system you bought solved something. But the data now lives in three places, people bridge the gaps by hand, and nobody is quite sure what a job actually costs. The expensive work isn't inside any one tool — it's in the space between them.</p>
+          <ul>
+            <li>You pay for software and still export to a spreadsheet</li>
+            <li>The same information gets entered more than once</li>
+            <li>Two systems hold the same data and disagree</li>
+            <li>Reports are rebuilt by hand every month</li>
+            <li>Nobody is sure what a job actually costs you</li>
+          </ul>
+          <div class="foot"><a class="btn" href="#engagements">See where to start</a></div>
+        </article>
+
+        <article class="audience">
+          <span class="who">For public agencies</span>
+          <h3>Modernization you can defend</h3>
+          <p>Aging systems, data nobody has inventoried, and an expectation that you will adopt AI responsibly on top of both. We build the foundation that makes those decisions defensible — and document it so it survives an audit.</p>
+          <ul>
+            <li>Legacy application modernization and migration</li>
+            <li>Data governance, classification and lineage</li>
+            <li>AI and automated-decision system inventories</li>
+            <li>Application security review and remediation</li>
+            <li>Tamper-evident logging and verifiable audit trails</li>
+          </ul>
+          <div class="foot"><a class="btn" href="#company">Corporate data &amp; codes</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="band" id="services">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="eyebrow">Services</span>
+        <h2>Four things we do</h2>
+        <p>Most engagements combine two or three. We start by understanding the work, not by picking a technology.</p>
       </div>
 
       <div class="caps">
-
         <article class="cap">
-          <h3>Legacy application modernization</h3>
-          <p>Moving aging systems and the data inside them onto maintainable platforms — without losing lineage, breaking statutory retention, or stranding the records that matter. We work from a documented current-state assessment, not a rewrite proposal.</p>
+          <h3>AI Automation &amp; Process Engineering</h3>
+          <p>We map how work actually moves through your operation — including the manual bridges between the systems you already pay for — and build the automation that removes them. AI where it genuinely fits, simpler tools where it doesn't.</p>
           <ul>
-            <li>Current-state assessment and technical debt inventory</li>
-            <li>Data migration with lineage preservation</li>
-            <li>Incremental replatforming and strangler-pattern cutover</li>
-            <li>Retention and disposition mapping</li>
+            <li>Process mapping and manual-effort measurement</li>
+            <li>Workflow automation and system-to-system handoffs</li>
+            <li>Document and data processing pipelines</li>
+            <li>Predictive and analytical models where data supports them</li>
           </ul>
         </article>
 
         <article class="cap">
-          <h3>Data governance &amp; AI readiness</h3>
-          <p>Most agencies are being asked to adopt AI on top of data nobody has inventoried, classified, or quality-checked. We build the foundation that makes the AI question answerable — and document it in a form that survives an audit.</p>
+          <h3>Custom Software Development</h3>
+          <p>When off-the-shelf software doesn't fit the way you work, we build what does — internal tools, customer-facing applications, and the interfaces that connect them. Built to be maintained, documented so someone else could pick it up.</p>
           <ul>
-            <li>Data inventory, classification, and lineage mapping</li>
-            <li>AI and automated-decision system inventories</li>
-            <li>Governance gap registers and remediation sequencing</li>
-            <li>Data quality assessment and remediation</li>
+            <li>Web and mobile application development</li>
+            <li>Internal tools, portals and dashboards</li>
+            <li>API design and integration layers</li>
+            <li>Modernization and replacement of legacy applications</li>
           </ul>
         </article>
 
         <article class="cap">
-          <h3>Security engineering &amp; assessment</h3>
-          <p>Application-layer security for the systems we and others build: review, secure development practice, and remediation support. Findings come with the code change that fixes them, not just a severity rating.</p>
+          <h3>Digital Infrastructure &amp; Integration</h3>
+          <p>The layer everything else depends on: databases, cloud environments, and the connections between the systems you already run. Most automation projects fail here first, so this is where we look first.</p>
           <ul>
-            <li>Application security review and threat modeling</li>
-            <li>Secure development lifecycle implementation</li>
-            <li>Remediation engineering and verification</li>
-            <li>Access control and audit logging design</li>
+            <li>Cloud environments on AWS, Azure and GCP</li>
+            <li>Database design, migration and administration</li>
+            <li>Systems integration across existing platforms</li>
+            <li>Access control, backup and operational resilience</li>
           </ul>
         </article>
 
         <article class="cap">
-          <h3>Verifiable records engineering</h3>
-          <p>Our specialty. When a record's integrity has to be demonstrable rather than asserted, we design the cryptographic machinery that proves it — tamper-evident logging, provenance chains, and independently verifiable audit trails.</p>
+          <h3>Data &amp; Records Engineering</h3>
+          <p>Our technical specialty, and the reason the rest holds up. Data warehousing, lineage and governance — plus cryptographic audit trails for records whose integrity has to be demonstrable rather than asserted.</p>
           <ul>
-            <li>Tamper-evident logging and append-only ledgers</li>
-            <li>Cryptographic provenance and chain of custody</li>
-            <li>Credential and document verification systems</li>
-            <li>Distributed ledger architecture where it is warranted</li>
+            <li>ETL pipelines and data warehousing</li>
+            <li>Data inventory, classification and lineage</li>
+            <li>Tamper-evident logging and cryptographic provenance</li>
+            <li>Reporting and business intelligence</li>
           </ul>
         </article>
-
       </div>
     </div>
   </section>
@@ -651,35 +357,35 @@ footer.site .legal { font-family: "JetBrains Mono", monospace; font-size: .72rem
   <section class="band" id="engagements">
     <div class="shell">
       <div class="sec-head">
-        <span class="eyebrow">How we start</span>
-        <h2>Fixed-price assessments with a defined deliverable</h2>
-        <p>We do not open with an open-ended time-and-materials discovery phase. Each engagement below has a fixed price, a fixed duration, and a document at the end that stands on its own — including if you never hire us again.</p>
+        <span class="eyebrow">Start here</span>
+        <h2>We measure before we build</h2>
+        <p>Every engagement begins with a fixed-price assessment that produces a document you own — including if you never hire us again. We do not quote a build until we can show you, in your own numbers, what the current process is costing.</p>
       </div>
 
       <div class="engagements">
+        <article class="eng lead">
+          <span class="term">2–3 weeks · Fixed price</span>
+          <h3>Workflow Cost Audit</h3>
+          <p>Our entry point for businesses. We sit with the people doing the work, map the processes end to end, and count the hours going into repetitive steps and system-to-system bridging. You get a costed picture of that work — including the software you're paying for and not fully using — a ranked list of what could be automated, and what each fix would take to build.</p>
+          <div class="out"><b>You receive</b> Process maps, manual-effort inventory, opportunity register ranked by payback, costed roadmap</div>
+        </article>
 
         <article class="eng">
           <span class="term">4 weeks · Fixed price</span>
-          <h3>AI Use Inventory &amp; Governance Readiness Review</h3>
-          <p>We catalogue every AI and automated decision system operating in your department, map each against the governance obligations that apply to it, and hand you a gap register with remediation sequenced by risk.</p>
-          <div class="out"><b>You receive</b> Inventory, obligation map, gap register, remediation roadmap</div>
+          <h3>AI Use &amp; Governance Readiness Review</h3>
+          <p>For agencies and regulated organizations. We catalogue every AI and automated decision system already operating — including the ones embedded in vendor products nobody catalogued as AI — and map each against the obligations that apply to you.</p>
+          <div class="out"><b>You receive</b> System inventory, obligation map, gap register, remediation roadmap</div>
         </article>
 
         <article class="eng">
           <span class="term">6 weeks · Fixed price</span>
-          <h3>Legacy Application Risk &amp; Modernization Assessment</h3>
-          <p>A structured assessment of a legacy system's technical risk, data condition, and modernization options — written against the modernization framework your agency already reports under, so the output drops straight into a funding request.</p>
+          <h3>Legacy System &amp; Modernization Assessment</h3>
+          <p>For organizations carrying an aging system nobody wants to touch. We assess its technical risk, the condition of the data inside it, and the realistic options — written so the output drops into a budget request without translation.</p>
           <div class="out"><b>You receive</b> Risk assessment, options analysis, costed modernization roadmap</div>
         </article>
-
-        <article class="eng">
-          <span class="term">6 weeks · Fixed price</span>
-          <h3>Records Integrity &amp; Audit Trail Assessment</h3>
-          <p>How does your records system prove its contents have not been altered? We examine the current audit trail, identify where integrity is asserted rather than demonstrated, and design the tamper-evident controls that close the gap.</p>
-          <div class="out"><b>You receive</b> Integrity assessment, control design, implementation plan</div>
-        </article>
-
       </div>
+
+      <p style="margin-top:26px;font-size:.95rem;color:var(--slate);max-width:70ch">We don't publish savings percentages, because we don't know yours yet. The audit exists to find that number honestly — and if it turns out the manual work isn't costing enough to justify building anything, we will tell you that and you'll have the analysis to prove it.</p>
     </div>
   </section>
 
@@ -687,53 +393,36 @@ footer.site .legal { font-family: "JetBrains Mono", monospace; font-size: .72rem
   <section class="band" id="approach">
     <div class="shell">
       <div class="sec-head">
-        <span class="eyebrow">Differentiators</span>
-        <h2>Why a small firm is the right call here</h2>
-        <p>We are not the low-risk choice for a hundred-million-dollar program, and we do not bid those. For scoped, technical, accountable work, the things below are advantages rather than compromises.</p>
+        <span class="eyebrow">Why AKETEC</span>
+        <h2>An engineering firm, not an automation agency</h2>
+        <p>There is no shortage of people offering to put AI into your business. Here is what is actually different about working with us.</p>
       </div>
 
       <div class="diffs">
+        <div class="diff"><span class="mk">01</span><div>
+          <h3>The engineer who scopes the work does the work</h3>
+          <p>There is no bench of junior staff behind the proposal. The person who maps your process is the person who builds the fix. Nothing is handed off after you sign, because there is nobody to hand it to.</p>
+        </div></div>
 
-        <div class="diff">
-          <span class="mk">01</span>
-          <div>
-            <h3>The engineers who scope the work do the work</h3>
-            <p>There is no bench of junior staff waiting behind the proposal. The senior engineer who assesses your system is the one who writes the remediation. Nothing is handed off after award, because there is nobody to hand it to.</p>
-          </div>
-        </div>
+        <div class="diff"><span class="mk">02</span><div>
+          <h3>We quantify before we recommend</h3>
+          <p>Automation is easy to sell and easy to get wrong. We measure what the manual work costs before proposing anything, so the decision to build rests on your numbers rather than our enthusiasm.</p>
+        </div></div>
 
-        <div class="diff">
-          <span class="mk">02</span>
-          <div>
-            <h3>Fixed price, fixed scope, documented deliverable</h3>
-            <p>Our assessments are priced and bounded before we start. You know what the document contains and when it arrives. If the work needs to grow, that is a new engagement with its own price — not a change order against an open clock.</p>
-          </div>
-        </div>
+        <div class="diff"><span class="mk">03</span><div>
+          <h3>Fixed price, fixed scope, documented deliverable</h3>
+          <p>Assessments are priced and bounded before we start. If the work needs to grow, that is a new engagement with its own price — not a change order against an open clock.</p>
+        </div></div>
 
-        <div class="diff">
-          <span class="mk">03</span>
-          <div>
-            <h3>Deliverables written to your frameworks, not ours</h3>
-            <p>Assessment output is formatted against the modernization and governance frameworks your agency already reports under. That means it can be attached to a funding request or an audit response without translation.</p>
-          </div>
-        </div>
+        <div class="diff"><span class="mk">04</span><div>
+          <h3>Fifteen years of enterprise data engineering behind it</h3>
+          <p>ETL and data warehousing across healthcare, aerospace, telecommunications and political technology. M.S. Data Science from George Washington University. This is not a new practice built on top of a new technology.</p>
+        </div></div>
 
-        <div class="diff">
-          <span class="mk">04</span>
-          <div>
-            <h3>Verifiable-records depth most integrators don't have</h3>
-            <p>Cryptographic provenance and tamper-evident system design are a specialty, not a slide. When a records system has to prove its own integrity — for audit, for litigation, or because the statute says so — that is the problem we are built around.</p>
-          </div>
-        </div>
-
-        <div class="diff">
-          <span class="mk">05</span>
-          <div>
-            <h3>Texas-based delivery, US persons only</h3>
-            <p>All work is performed in the United States by US persons. No offshore development, no subcontracted delivery to unnamed third parties. Where a contract carries citizenship or data residency requirements, we already meet them.</p>
-          </div>
-        </div>
-
+        <div class="diff"><span class="mk">05</span><div>
+          <h3>Texas-based, US delivery</h3>
+          <p>All work is performed in the United States. No offshore development, and no subcontracted delivery to third parties you haven't met.</p>
+        </div></div>
       </div>
     </div>
   </section>
@@ -743,75 +432,26 @@ footer.site .legal { font-family: "JetBrains Mono", monospace; font-size: .72rem
     <div class="shell">
       <div class="sec-head">
         <span class="eyebrow">Corporate data</span>
-        <h2>Everything a contracting officer needs on one screen</h2>
-        <p>Current as of August 2026. <a href="assets/docs/aketec-capability-statement.pdf" target="_blank" rel="noopener">Download the formatted capability statement (PDF)</a>.</p>
+        <h2>For procurement and prime contractors</h2>
+        <p>Everything a contracting officer or supplier-diversity team needs, on one screen. <a href="assets/docs/aketec-capability-statement.pdf" target="_blank" rel="noopener">Download the capability statement (PDF)</a>.</p>
       </div>
 
       <div class="datagrid">
-
-        <dl class="datum">
-          <dt>Registered legal entity</dt>
-          <dd>Alkebuleum Technology</dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>Operating name</dt>
-          <dd>AKETEC</dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>Unique Entity ID (UEI)</dt>
-          <dd><span class="placeholder">Available on request</span></dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>CAGE code</dt>
-          <dd><span class="placeholder">Available on request</span></dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>Business type</dt>
-          <dd>Small business · Limited liability company · State of Texas</dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>Year established</dt>
-          <dd>2024</dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>NAICS codes</dt>
-          <dd>541511 · 541512 · 541519 · 541611 · 541690 · 518210</dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>PSC codes</dt>
-          <dd>DA01 · DF01 · DJ01 · DC01</dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>Registrations</dt>
-          <dd><span class="placeholder">Available on request</span></dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>Geographic coverage</dt>
-          <dd>State of Texas · Nationwide remote delivery</dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>Principal office</dt>
-          <dd>Hutto, Texas 78634</dd>
-        </dl>
-
-        <dl class="datum">
-          <dt>Point of contact</dt>
-          <dd>Ernesto Herbert · Founder/CEO<br>info@aketec.com</dd>
-        </dl>
-
+        <dl class="datum"><dt>Registered legal entity</dt><dd>Alkebuleum Technology LLC</dd></dl>
+        <dl class="datum"><dt>Operating name</dt><dd>AKETEC</dd></dl>
+        <dl class="datum"><dt>Unique Entity ID (UEI)</dt><dd><span class="placeholder">Pending SAM.gov registration</span></dd></dl>
+        <dl class="datum"><dt>CAGE code</dt><dd><span class="placeholder">Pending SAM.gov registration</span></dd></dl>
+        <dl class="datum"><dt>Business type</dt><dd>Small business · LLC · State of Texas · Est. 2024</dd></dl>
+        <dl class="datum"><dt>Registrations</dt><dd><span class="placeholder">SAM.gov and Texas CMBL in progress</span></dd></dl>
+        <dl class="datum"><dt>NAICS</dt><dd>541511 (primary) · 541512 · 541519 · 541611 · 541690 · 518210</dd></dl>
+        <dl class="datum"><dt>PSC</dt><dd>DA01 · DF01 · DJ01 · DC01</dd></dl>
+        <dl class="datum"><dt>Contract types</dt><dd>Firm-fixed-price · Labor-hour · T&amp;M · Prime or subcontractor</dd></dl>
+        <dl class="datum"><dt>Coverage</dt><dd>Central Texas on-site · Nationwide remote delivery</dd></dl>
+        <dl class="datum"><dt>Principal office</dt><dd>Hutto, Texas 78634</dd></dl>
+        <dl class="datum"><dt>Point of contact</dt><dd>Ernesto Herbert, Founder / CEO · info@aketec.com</dd></dl>
       </div>
 
-      <p class="codes-note">Insurance: general liability, professional liability (E&amp;O), and cyber liability coverage in force. Certificates furnished on request. AKETEC accepts firm-fixed-price, labor-hour, and time-and-materials arrangements, and is available as a subcontractor to prime contract holders.</p>
+      <p class="codes-note">Insurance: general liability, professional liability (E&amp;O), and cyber liability coverage in force. Certificates furnished on request. AKETEC accepts firm-fixed-price, labor-hour and time-and-materials arrangements, and is available as a subcontractor to prime contract holders.</p>
     </div>
   </section>
 
@@ -821,28 +461,20 @@ footer.site .legal { font-family: "JetBrains Mono", monospace; font-size: .72rem
       <div class="contact-grid">
         <div>
           <span class="eyebrow">Contact</span>
-          <h2 style="font-family:Archivo,sans-serif;font-size:clamp(1.5rem,3vw,2rem);line-height:1.16;letter-spacing:-.02em;font-weight:700;margin:0 0 .7rem;">Start with a scoped conversation</h2>
-          <p>Tell us the system, the deadline, or the finding you are working around. If an assessment is the right first step we will say so and quote it. If it isn't, we will tell you that too — we would rather pass on work than sell you a document you don't need.</p>
-          <p>We respond to requests from agency staff, prime contract holders seeking subcontractors, and small business liaison officers within one business day.</p>
+          <h2 style="font-family:Archivo,sans-serif;font-size:clamp(1.5rem,3vw,2rem);line-height:1.16;letter-spacing:-.02em;font-weight:700;margin:0 0 .7rem;">Start with a conversation, not a proposal</h2>
+          <p>Tell us what your team is spending too much time on, or which system is holding you back. If an audit is the right first step we'll say so and quote it. If it isn't, we'll tell you that too — we'd rather pass on work than sell you a document you don't need.</p>
+          <p>We're in Hutto, so an in-person conversation anywhere in the Austin area is easy. We respond within one business day.</p>
         </div>
 
         <div class="contact-lines">
-          <div class="cline">
-            <span class="lab">Email</span>
-            <span class="val"><a href="mailto:info@aketec.com">info@aketec.com</a></span>
-          </div>
-          <div class="cline">
-            <span class="lab">Telephone</span>
-            <span class="val"><span class="placeholder">Available on request</span></span>
-          </div>
-          <div class="cline">
-            <span class="lab">Office</span>
-            <span class="val">Hutto, Texas 78634</span>
-          </div>
-          <div class="cline">
-            <span class="lab">Capability statement</span>
-            <span class="val"><a href="assets/docs/aketec-capability-statement.pdf" target="_blank" rel="noopener">Download (PDF)</a></span>
-          </div>
+          <div class="cline"><span class="lab">Email</span>
+            <span class="val"><a href="mailto:info@aketec.com">info@aketec.com</a></span></div>
+          <div class="cline"><span class="lab">Telephone</span>
+            <span class="val"><a href="tel:+12404958592">+1 (240) 495-8592</a></span></div>
+          <div class="cline"><span class="lab">Office</span>
+            <span class="val">Hutto, Texas 78634</span></div>
+          <div class="cline"><span class="lab">Capability statement</span>
+            <span class="val"><a href="assets/docs/aketec-capability-statement.pdf" target="_blank" rel="noopener">Download (PDF)</a></span></div>
         </div>
       </div>
     </div>
@@ -852,7 +484,7 @@ footer.site .legal { font-family: "JetBrains Mono", monospace; font-size: .72rem
 
 <footer class="site">
   <div class="shell footrow">
-    <span class="legal">AKETEC · Public-sector records &amp; data engineering · State of Texas</span>
+    <span class="legal">AKETEC · Automation, software &amp; data engineering · Hutto, Texas</span>
     <span class="legal">&copy; 2024–2026 AKETEC</span>
   </div>
 </footer>
