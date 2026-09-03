@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Front Office Automation | AKETEC — Hutto, TX</title>
+<meta name="description" content="AI automation for after-hours calls, scheduling, intake and email triage — connected to the systems your business already runs. Engineered by AKETEC in Hutto, Texas.">
+<link rel="canonical" href="https://aketec.com/ai-front-office">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI Front Office Automation | AKETEC">
+<meta property="og:description" content="AI automation for after-hours calls, scheduling, intake and email triage — connected to the systems your business already runs.">
+<meta property="og:url" content="https://aketec.com/ai-front-office">
+<meta property="og:image" content="https://aketec.com/assets/img/og-image.png">
+<meta name="robots" content="index,follow">
+
+<link rel="icon" type="image/svg+xml" href="../assets/logo/mark-primary.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --paper:#F5F2EA; --paper-2:#ECEEEB; --card:#FFFDF8;
+  --ink:#17150F; --ink-2:#3D3930; --slate:#5F5A4C;
+  --rule:#DDD6C6; --rule-soft:#E8E2D5;
+  --brass:#966D22; --brass-lit:#A8813A; --brass-soft:#EFE6D2;
+  --shadow:0 1px 2px rgba(23,21,15,.05), 0 8px 24px -16px rgba(23,21,15,.25);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131210; --paper-2:#1A1815; --card:#1C1A16;
+    --ink:#EFEBE0; --ink-2:#CAC4B5; --slate:#9A9384;
+    --rule:#2E2A23; --rule-soft:#24211B;
+    --brass:#C9A055; --brass-lit:#DDB871; --brass-soft:#2A2317;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+body{margin:0;background:var(--paper);color:var(--ink);
+     font-family:"Source Serif 4",Georgia,serif;font-size:17.5px;line-height:1.62;
+     -webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.btn,.eyebrow,.wordmark{font-family:"Archivo","Helvetica Neue",Arial,sans-serif}
+p{margin:0 0 1.05rem;max-width:66ch}p:last-child{margin-bottom:0}
+a{color:var(--brass);text-underline-offset:2px}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
+.shell{max-width:1080px;margin:0 auto;padding:0 30px}
+.eyebrow{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+         color:var(--brass);display:block;margin-bottom:.85rem}
+
+.topline{height:3px;background:var(--brass)}
+header.site{border-bottom:1px solid var(--rule)}
+.headrow{display:flex;align-items:center;justify-content:space-between;gap:24px;
+         padding:16px 0;flex-wrap:wrap}
+.wordmark{display:block;text-decoration:none;color:var(--ink);line-height:0}
+.wordmark .lockup{display:block;height:34px;width:auto;overflow:visible}
+.wordmark .lk-brass{stroke:var(--brass)}
+.wordmark .lk-name{fill:currentColor;font-family:"Archivo",sans-serif;font-weight:800}
+.wordmark .lk-sub{fill:var(--slate);font-family:"JetBrains Mono",monospace;font-weight:500}
+@media (max-width:560px){.wordmark .lockup{height:26px}}
+.backlink{font-family:"Archivo",sans-serif;font-size:.82rem;font-weight:600;
+          color:var(--slate);text-decoration:none}
+.backlink:hover{color:var(--ink)}
+
+.btn{display:inline-block;font-size:.82rem;font-weight:700;padding:11px 20px;border-radius:2px;
+     text-decoration:none;border:1.5px solid var(--brass);color:var(--brass);background:transparent;
+     transition:background .15s ease,color .15s ease}
+.btn:hover{background:var(--brass);color:var(--paper)}
+.btn.solid{background:var(--brass);color:var(--paper)}
+.btn.solid:hover{background:var(--brass-lit);border-color:var(--brass-lit)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+.hero{padding:64px 0 56px;border-bottom:1px solid var(--rule)}
+.hero h1{font-size:clamp(1.9rem,4vw,2.7rem);line-height:1.14;letter-spacing:-.024em;
+         font-weight:800;margin:0 0 1.1rem;max-width:20ch;text-wrap:balance}
+.hero .lede{font-size:1.1rem;line-height:1.55;color:var(--ink-2);max-width:62ch;margin-bottom:2rem}
+
+section.band{padding:64px 0;border-bottom:1px solid var(--rule)}
+.sec-head{margin-bottom:34px;max-width:62ch}
+.sec-head h2{font-size:clamp(1.4rem,2.8vw,1.8rem);line-height:1.18;letter-spacing:-.02em;
+             font-weight:700;margin:0 0 .7rem;text-wrap:balance}
+.sec-head p{color:var(--slate);margin:0}
+
+.caps{display:grid;gap:16px}
+@media (min-width:700px){.caps{grid-template-columns:1fr 1fr}}
+.cap{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--brass);
+     border-radius:2px;padding:24px;box-shadow:var(--shadow)}
+.cap h3{font-size:1.02rem;font-weight:700;margin:0 0 .5rem;letter-spacing:-.008em}
+.cap p{font-size:.95rem;color:var(--ink-2);margin:0}
+
+.cap-featured{margin-top:16px;background:var(--brass-soft);border:1.5px solid var(--brass);
+     border-radius:2px;padding:28px;display:flex;gap:18px;align-items:flex-start}
+.cap-featured .mk{font-family:"JetBrains Mono",monospace;font-size:.7rem;font-weight:700;
+     letter-spacing:.08em;text-transform:uppercase;color:var(--brass);flex:none;padding-top:4px}
+.cap-featured h3{font-size:1.08rem;font-weight:700;margin:0 0 .5rem;letter-spacing:-.01em}
+.cap-featured p{font-size:.97rem;color:var(--ink-2);margin:0;max-width:60ch}
+@media (max-width:560px){.cap-featured{flex-direction:column;gap:8px}}
+
+.closing{padding:56px 0;text-align:left}
+.closing .sec-head{margin-bottom:22px}
+
+footer.site{padding:34px 0 44px;border-top:1px solid var(--rule);font-size:.8rem;color:var(--slate)}
+.footrow{display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center;justify-content:space-between}
+footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
+</style>
+</head>
+
+<body>
+<div class="topline"></div>
+
+<header class="site">
+  <div class="shell headrow">
+    <a class="wordmark" href="/" aria-label="AKETEC home">
+      <svg class="lockup" viewBox="0.62 -1.0 470 70.85" role="img" aria-label="AKETEC — automation, software, data"><g transform="translate(0,-1.62)"><path d="M 4.33,4.33 L 49.74,4.33 L 67.76,22.35 L 67.76,67.76 L 4.33,67.76 Z" fill="none" stroke="currentColor" stroke-width="5.41" stroke-linejoin="miter"/><path d="M 18.02,23.79 L 51.18,23.79" stroke="currentColor" stroke-width="5.41"/><path d="M 28.12,36.05 L 57.67,36.05" class="lk-brass" stroke-width="5.41"/><path d="M 18.02,48.3 L 41.81,48.3" stroke="currentColor" stroke-width="5.41"/></g><text x="96.42" y="39.85" class="lk-name" font-size="58" letter-spacing="7.25">AKETEC</text><text x="99.03" y="68.85" class="lk-sub" font-size="16.24" letter-spacing="3.31">AUTOMATION · SOFTWARE · DATA</text></svg>
+    </a>
+    <a class="backlink" href="/">aketec.com &rarr;</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="shell">
+      <span class="eyebrow">AI Automation &amp; Process Engineering</span>
+      <h1>Who's covering your front office after 5pm?</h1>
+      <p class="lede">Your phone rings after hours. Emails arrive faster than anyone can sort them. The same five questions get asked every day. AI can cover that work, so your staff spend their time on customers, operations and revenue.</p>
+      <div class="cta-row">
+        <a class="btn solid" href="/costmap">Request a Workflow Cost Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CAPABILITIES ============ -->
+  <section class="band" id="capabilities">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="eyebrow">Capabilities</span>
+        <h2>AI front office automation</h2>
+      </div>
+
+      <div class="caps">
+        <article class="cap">
+          <h3>After-hours and overflow calls</h3>
+          <p>Answered, not sent to voicemail.</p>
+        </article>
+
+        <article class="cap">
+          <h3>Appointment scheduling and reminders</h3>
+          <p>Booking, rescheduling, no-show reduction.</p>
+        </article>
+
+        <article class="cap">
+          <h3>Customer intake and lead qualification</h3>
+          <p>Details captured, the right questions asked, routed to the right person.</p>
+        </article>
+
+        <article class="cap">
+          <h3>Email triage and routine replies</h3>
+          <p>The repetitive inbox work handled, anything unusual escalated to a human.</p>
+        </article>
+      </div>
+
+      <div class="cap-featured">
+        <span class="mk">05</span>
+        <div>
+          <h3>Connected to the systems you already use</h3>
+          <p>Every one of the above writes into the CRM or software the business already runs. Anyone can resell a voice agent — connecting it correctly to an existing operation is the engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLOSING CTA ============ -->
+  <section class="band closing">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="eyebrow">Start here</span>
+        <h2>Request a Workflow Cost Audit</h2>
+        <p>Show us one workflow that eats too much staff time. We will tell you what it is costing you and what can realistically be automated.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn solid" href="/costmap">Request a Workflow Cost Audit</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="shell footrow">
+    <span class="legal"><span data-c="operatingName">AKETEC</span> · Automation, software &amp; data engineering · <span data-c="city">Hutto</span>, <span data-c="state">Texas</span></span>
+    <span class="legal">&copy; 2024–2026 <span data-c="operatingName">AKETEC</span></span>
+  </div>
+</footer>
+
+<script src="../assets/js/company.js" defer></script>
+</body>
+</html>
