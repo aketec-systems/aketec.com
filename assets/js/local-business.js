@@ -2,11 +2,6 @@
  * Injects ProfessionalService JSON-LD for the homepage, sourced entirely
  * from assets/js/company.js (window.AKETEC_COMPANY) — see website brief
  * section 6. Load this after company.js.
- *
- * `sameAs` (LinkedIn company page) is intentionally omitted: the only
- * record of it is aketec-brand/linkedin/SETUP.txt, which hedges between
- * linkedin.com/company/aketec and a /aketec-systems fallback and is not
- * confirmation either URL is actually live. Add it once confirmed.
  */
 (function () {
   function inject() {
@@ -35,7 +30,8 @@
         "Pflugerville, TX",
         "Austin, TX",
         "Texas"
-      ]
+      ],
+      "sameAs": ["https://www.linkedin.com/company/aketec/"]
     };
 
     var script = document.createElement("script");
