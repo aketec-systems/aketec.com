@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free cost map — AKETEC</title>
+<meta name="description" content="Describe one process that eats your team's time. AKETEC returns a written one-page cost map: where the hours go, what they cost per year, and what is worth fixing first. Free, no sales call.">
+<link rel="canonical" href="https://aketec.com/costmap">
+<meta property="og:title" content="Send us one process. Get back a cost map.">
+<meta property="og:description" content="A written one-page finding: where the hours go, what they cost per year, and what is worth fixing first. Free. Five business days. No sales call.">
+<meta property="og:url" content="https://aketec.com/costmap">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://aketec.com/assets/img/og-image.png">
+<meta name="robots" content="index,follow">
+
+<link rel="icon" type="image/svg+xml" href="../assets/logo/mark-primary.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
+<style>
+:root{
+  --paper:#F5F2EA; --paper-2:#ECEEEB; --card:#FFFDF8;
+  --ink:#17150F; --ink-2:#3D3930; --slate:#5F5A4C;
+  --rule:#DDD6C6; --rule-soft:#E8E2D5;
+  --brass:#966D22; --brass-lit:#A8813A; --brass-soft:#EFE6D2;
+  --shadow:0 1px 2px rgba(23,21,15,.05), 0 8px 24px -16px rgba(23,21,15,.25);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#131210; --paper-2:#1A1815; --card:#1C1A16;
+    --ink:#EFEBE0; --ink-2:#CAC4B5; --slate:#9A9384;
+    --rule:#2E2A23; --rule-soft:#24211B;
+    --brass:#C9A055; --brass-lit:#DDB871; --brass-soft:#2A2317;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.8);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+body{margin:0;background:var(--paper);color:var(--ink);
+     font-family:"Source Serif 4",Georgia,serif;font-size:17.5px;line-height:1.62;
+     -webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.btn,.eyebrow,.wordmark,label,legend{font-family:"Archivo","Helvetica Neue",Arial,sans-serif}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+p{margin:0 0 1.05rem;max-width:66ch}p:last-child{margin-bottom:0}
+a{color:var(--brass);text-underline-offset:2px}
+a:focus-visible,.btn:focus-visible,input:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
+.shell{max-width:1080px;margin:0 auto;padding:0 30px}
+.eyebrow{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
+         color:var(--brass);display:block;margin-bottom:.85rem}
+
+.topline{height:3px;background:var(--brass)}
+header.site{border-bottom:1px solid var(--rule)}
+.headrow{display:flex;align-items:center;justify-content:space-between;gap:24px;
+         padding:16px 0;flex-wrap:wrap}
+.wordmark{display:block;text-decoration:none;color:var(--ink);line-height:0}
+.wordmark .lockup{display:block;height:34px;width:auto;overflow:visible}
+.wordmark .lk-brass{stroke:var(--brass)}
+.wordmark .lk-name{fill:currentColor;font-family:"Archivo",sans-serif;font-weight:800}
+.wordmark .lk-sub{fill:var(--slate);font-family:"JetBrains Mono",monospace;font-weight:500}
+@media (max-width:560px){.wordmark .lockup{height:26px}}
+.backlink{font-family:"Archivo",sans-serif;font-size:.82rem;font-weight:600;
+          color:var(--slate);text-decoration:none}
+.backlink:hover{color:var(--ink)}
+
+.hero-b h1{font-size:clamp(1.9rem,4.2vw,2.7rem);line-height:1.1;letter-spacing:-.026em;
+         font-weight:800;margin:0 0 1.1rem;max-width:16ch;text-wrap:balance}
+.hero-b .lede{font-size:1.1rem;line-height:1.55;color:var(--ink-2);max-width:52ch;margin:0}
+
+/* Mobile order: pitch, then the form, then the detail for people who want it.
+   Desktop: pitch and detail stack in column one, the form holds column two
+   from the very top so it is never below the fold. */
+.split{display:grid;gap:38px;padding:52px 0 16px}
+.hero-b{order:1} .form-b{order:2} .det-b{order:3}
+@media (min-width:900px){
+  .split{grid-template-columns:1.02fr 1fr;column-gap:58px;row-gap:44px;align-items:start}
+  .hero-b{grid-column:1;grid-row:1}
+  .det-b{grid-column:1;grid-row:2}
+  .form-b{grid-column:2;grid-row:1 / span 2}
+}
+
+h2{font-size:1.32rem;line-height:1.2;letter-spacing:-.018em;font-weight:700;margin:0 0 1rem}
+h3{font-size:.98rem;font-weight:700;margin:0 0 .3rem;letter-spacing:-.008em}
+
+ol.get{list-style:none;counter-reset:g;padding:0;margin:0 0 34px;display:grid;gap:18px}
+ol.get li{counter-increment:g;padding-left:44px;position:relative}
+ol.get li::before{content:counter(g);position:absolute;left:0;top:1px;width:28px;height:28px;
+  display:grid;place-items:center;border:1.5px solid var(--brass);color:var(--brass);
+  border-radius:50%;font-family:"JetBrains Mono",monospace;font-size:.76rem;font-weight:600}
+ol.get p{font-size:.96rem;color:var(--ink-2);margin:0;max-width:46ch}
+
+.terms{border-top:1px solid var(--rule);padding-top:26px;display:grid;gap:20px}
+.terms .row{display:grid;gap:.25rem}
+.terms .k{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.11em;
+          text-transform:uppercase;color:var(--brass)}
+.terms .v{font-size:.96rem;color:var(--ink-2);max-width:48ch}
+
+/* ---- form ---- */
+.formcard{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--brass);
+          border-radius:2px;padding:30px;box-shadow:var(--shadow)}
+@media (min-width:900px){.formcard{position:sticky;top:28px}}
+.formcard h2{margin-bottom:.4rem}
+.formcard .sub{font-size:.94rem;color:var(--slate);margin:0 0 22px}
+.field{display:grid;gap:6px;margin-bottom:16px}
+label{font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;
+      color:var(--slate)}
+label .req{color:var(--brass)}
+input,textarea{font-family:"Source Serif 4",Georgia,serif;font-size:1rem;color:var(--ink);
+  background:var(--paper);border:1px solid var(--rule);border-radius:2px;padding:11px 12px;
+  width:100%;line-height:1.45}
+textarea{min-height:132px;resize:vertical}
+input::placeholder,textarea::placeholder{color:color-mix(in srgb,var(--slate) 65%,transparent)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.btn{display:inline-block;font-size:.86rem;font-weight:700;padding:13px 22px;border-radius:2px;
+     text-decoration:none;border:1.5px solid var(--brass);color:var(--brass);background:transparent;
+     cursor:pointer;transition:background .15s ease,color .15s ease;font-family:"Archivo",sans-serif}
+.btn:hover{background:var(--brass);color:var(--paper)}
+.btn.solid{background:var(--brass);color:var(--paper);width:100%}
+.btn.solid:hover{background:var(--brass-lit);border-color:var(--brass-lit)}
+.altline{font-size:.86rem;color:var(--slate);margin:16px 0 0;text-align:center}
+.thanks{display:none;border-left:3px solid var(--brass);padding:4px 0 4px 18px}
+.thanks h2{margin-bottom:.5rem}
+.thanks p{font-size:.98rem;color:var(--ink-2)}
+form.sent{display:none}
+.thanks.on{display:block}
+
+.who{background:var(--paper-2);border-top:1px solid var(--rule);
+     border-bottom:1px solid var(--rule);padding:44px 0;margin-top:44px}
+.who .grid{display:grid;gap:26px}
+@media (min-width:820px){.who .grid{grid-template-columns:1.3fr 1fr}}
+.who p{font-size:1rem;color:var(--ink-2)}
+.facts{display:grid;gap:10px;align-content:start}
+.facts div{font-family:"JetBrains Mono",monospace;font-size:.75rem;letter-spacing:.04em;
+  color:var(--slate);text-transform:uppercase;display:flex;gap:10px;align-items:center}
+.facts div::before{content:"";width:5px;height:5px;background:var(--brass);
+  transform:rotate(45deg);flex:none}
+
+footer.site{padding:34px 0 44px;font-size:.8rem;color:var(--slate)}
+.footrow{display:flex;flex-wrap:wrap;gap:14px 30px;align-items:center;justify-content:space-between}
+footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
+</style>
+</head>
+
+<body>
+<div class="topline"></div>
+
+<header class="site">
+  <div class="shell headrow">
+    <a class="wordmark" href="/" aria-label="AKETEC home">
+      <svg class="lockup" viewBox="0.62 -1.0 470 70.85" role="img" aria-label="AKETEC — automation, software, data"><g transform="translate(0,-1.62)"><path d="M 4.33,4.33 L 49.74,4.33 L 67.76,22.35 L 67.76,67.76 L 4.33,67.76 Z" fill="none" stroke="currentColor" stroke-width="5.41" stroke-linejoin="miter"/><path d="M 18.02,23.79 L 51.18,23.79" stroke="currentColor" stroke-width="5.41"/><path d="M 28.12,36.05 L 57.67,36.05" class="lk-brass" stroke-width="5.41"/><path d="M 18.02,48.3 L 41.81,48.3" stroke="currentColor" stroke-width="5.41"/></g><text x="96.42" y="39.85" class="lk-name" font-size="58" letter-spacing="7.25">AKETEC</text><text x="99.03" y="68.85" class="lk-sub" font-size="16.24" letter-spacing="3.31">AUTOMATION · SOFTWARE · DATA</text></svg>
+    </a>
+    <a class="backlink" href="/">aketec.com &rarr;</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="shell">
+    <div class="split">
+
+      <div class="hero-b">
+        <span class="eyebrow">Free · No sales call · Five business days</span>
+        <h1>Send us one process. Get back a cost map.</h1>
+        <p class="lede">Pick the one that eats the most time — the report somebody rebuilds every month, the re-keying between two systems, the approval that sits in an inbox. Describe it in a few sentences. We send back a written page telling you what it costs you a year.</p>
+      </div>
+
+      <div class="det-b">
+        <h2>What comes back</h2>
+        <ol class="get">
+          <li>
+            <h3>Where the hours go</h3>
+            <p>The steps as they actually run, who touches each one, and how often — not the version in the process document.</p>
+          </li>
+          <li>
+            <h3>What it costs per year</h3>
+            <p>Those hours priced at a loaded rate you confirm, so the number is yours and you can defend it to whoever controls the budget.</p>
+          </li>
+          <li>
+            <h3>What is worth fixing first</h3>
+            <p>Ranked by cost removed against effort to remove it. Some steps are expensive and easy. Some are expensive and not worth touching yet.</p>
+          </li>
+          <li>
+            <h3>What we could not verify</h3>
+            <p>Every assumption behind the numbers, stated plainly. You should be able to check our work, and disagree with it.</p>
+          </li>
+        </ol>
+
+        <div class="terms">
+          <div class="row">
+            <span class="k">What it costs you</span>
+            <span class="v">Nothing, and about five minutes of typing. We do not need access to your systems.</span>
+          </div>
+          <div class="row">
+            <span class="k">Why we do this free</span>
+            <span class="v">It is the fastest honest way to show you how we work. Every paid engagement starts with this same measurement at more depth — so if the page is useful and you want the full audit, we will quote it. If it is not, keep the page.</span>
+          </div>
+          <div class="row">
+            <span class="k">What this is not</span>
+            <span class="v">Not a proposal. Not a sales call. If a number needs clarifying we will email you one question. You will not be added to a list.</span>
+          </div>
+          <div class="row">
+            <span class="k">If the answer is no</span>
+            <span class="v">If we do not think there is enough cost in the process to be worth automating, we will say so. That is a useful answer too, and it is cheaper than finding out later.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-b">
+        <div class="formcard">
+          <div class="thanks" id="thanks" role="status">
+            <h2>Got it.</h2>
+            <p>We will read it properly and send your cost map within five business days. If something needs clarifying, we will email you one question — nothing else.</p>
+            <p class="mono" style="font-size:.8rem">— <span data-c="contactName">Ernesto Herbert</span>, <span data-c="operatingName">AKETEC</span></p>
+          </div>
+
+          <!-- ==========================================================
+               SET UP BEFORE LAUNCH
+               Replace YOUR_FORM_ID below with a real endpoint, e.g. a free
+               Formspree form (formspree.io) or your host's form handler.
+               Until then the page still works: submitting opens a prefilled
+               email to info@aketec.com instead, so no lead is lost.
+               ========================================================== -->
+          <form id="cmform" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <h2>Send us the process</h2>
+            <p class="sub">Five fields. Nothing you send here goes anywhere but to us.</p>
+
+            <div class="field">
+              <label for="name">Your name <span class="req">*</span></label>
+              <input id="name" name="name" type="text" required autocomplete="name">
+            </div>
+
+            <div class="field">
+              <label for="email">Work email <span class="req">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email">
+            </div>
+
+            <div class="field">
+              <label for="org">Organization <span class="req">*</span></label>
+              <input id="org" name="organization" type="text" required autocomplete="organization">
+            </div>
+
+            <div class="field">
+              <label for="process">The process <span class="req">*</span></label>
+              <textarea id="process" name="process" required
+                placeholder="What happens, start to finish. Which systems are involved. What makes it slow or annoying. A few sentences is plenty."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="scale">Roughly how often, and how many people</label>
+              <input id="scale" name="scale" type="text"
+                placeholder="e.g. monthly, three people, about a day each">
+            </div>
+
+            <div class="hp" aria-hidden="true">
+              <label for="company_website">Leave this blank</label>
+              <input id="company_website" name="company_website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+
+            <button class="btn solid" type="submit">Send it &rarr;</button>
+            <p class="altline">Rather use email? <a data-c="email" href="mailto:info@aketec.com?subject=Cost%20map%20request">info@aketec.com</a></p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="who">
+    <div class="shell grid">
+      <div>
+        <h2>Who reads it</h2>
+        <p><span data-c="operatingName">AKETEC</span> is an engineering firm in <span data-c="city">Hutto</span>, <span data-c="state">Texas</span>. Your process is read by <span data-c="contactName">Ernesto Herbert</span>, who has spent fifteen years building data systems in healthcare, aerospace, telecommunications and political technology — including automated data pipelines that cut manual processing time by 30% at a national data platform.</p>
+        <p>The engineer who reads your process is the one who would build the fix. Nothing is handed to a junior bench after an award.</p>
+      </div>
+      <div class="facts">
+        <div><span data-c="city">Hutto</span>, <span data-c="state">Texas</span> · Austin metro</div>
+        <div>Small business · LLC</div>
+        <div>US-based delivery, US persons only</div>
+        <div>AI automation · Custom software</div>
+        <div>Digital infrastructure · Data engineering</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="shell footrow">
+    <span class="legal"><span data-c="operatingName">AKETEC</span> · Automation, software &amp; data engineering · <span data-c="city">Hutto</span>, <span data-c="state">Texas</span></span>
+    <span class="legal"><a href="/">aketec.com</a> · &copy; 2024–2026 <span data-c="operatingName">AKETEC</span></span>
+  </div>
+</footer>
+
+<script src="../assets/js/company.js" defer></script>
+<script>
+(function () {
+  var f = document.getElementById('cmform');
+  var thanks = document.getElementById('thanks');
+  if (!f) return;
+
+  function show() { f.classList.add('sent'); thanks.classList.add('on'); thanks.scrollIntoView({block:'center'}); }
+
+  f.addEventListener('submit', function (e) {
+    if (f.company_website && f.company_website.value) { e.preventDefault(); return; }
+
+    // No endpoint configured yet — fall back to a prefilled email so the
+    // page still collects the lead instead of dropping it.
+    if (f.action.indexOf('YOUR_FORM_ID') !== -1) {
+      e.preventDefault();
+      var toEmail = (window.AKETEC_COMPANY && window.AKETEC_COMPANY.email) || 'info@aketec.com';
+      var b = 'Name: ' + f.name.value
+            + '\nOrganization: ' + f.organization.value
+            + '\nEmail: ' + f.email.value
+            + '\nScale: ' + (f.scale.value || '-')
+            + '\n\nProcess:\n' + f.process.value + '\n';
+      window.location.href = 'mailto:' + toEmail + '?subject='
+        + encodeURIComponent('Cost map request — ' + (f.organization.value || f.name.value))
+        + '&body=' + encodeURIComponent(b);
+      setTimeout(show, 600);
+      return;
+    }
+
+    // Endpoint configured — post in the background and swap in the thank-you.
+    e.preventDefault();
+    fetch(f.action, { method: 'POST', body: new FormData(f), headers: { Accept: 'application/json' } })
+      .then(function (r) { r.ok ? show() : f.submit(); })
+      .catch(function () { f.submit(); });
+  });
+})();
+</script>
+
+</body>
+</html>
