@@ -37,18 +37,19 @@
   }
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
 body{margin:0;background:var(--paper);color:var(--ink);
      font-family:"Source Serif 4",Georgia,serif;font-size:17.5px;line-height:1.62;
-     -webkit-font-smoothing:antialiased}
+     -webkit-font-smoothing:antialiased;overflow-x:hidden;width:100%}
 h1,h2,h3,h4,nav,.btn,.eyebrow,.wordmark{font-family:"Archivo","Helvetica Neue",Arial,sans-serif}
 .mono,.datum dd,.code,.placeholder,.tag{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
 p{margin:0 0 1.05rem;max-width:66ch}p:last-child{margin-bottom:0}
 a{color:var(--brass);text-underline-offset:2px}
 a:focus-visible,.btn:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
-.shell{max-width:1080px;margin:0 auto;padding:0 30px}
+.shell{max-width:1080px;width:100%;margin:0 auto;padding:0 30px}
+@media (max-width:480px){.shell{padding:0 18px}}
 .eyebrow{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;
          color:var(--brass);display:block;margin-bottom:.85rem}
 .placeholder{color:var(--brass);font-size:.92em;border-bottom:1px dotted var(--brass);white-space:nowrap}
@@ -58,8 +59,8 @@ header.site{border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:50
   background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(10px)}
 .headrow{display:flex;align-items:center;justify-content:space-between;gap:24px;
          padding:16px 0;flex-wrap:wrap}
-.wordmark{display:block;text-decoration:none;color:var(--ink);line-height:0;order:1}
-.wordmark .lockup{display:block;height:34px;width:auto;overflow:visible}
+.wordmark{display:block;text-decoration:none;color:var(--ink);line-height:0;order:1;min-width:0}
+.wordmark .lockup{display:block;height:34px;width:auto;max-width:100%;overflow:visible}
 .wordmark .lk-brass{stroke:var(--brass)}
 .wordmark .lk-name{fill:currentColor;font-family:"Archivo",sans-serif;font-weight:800}
 .wordmark .lk-sub{fill:var(--slate);font-family:"JetBrains Mono",monospace;font-weight:500}
