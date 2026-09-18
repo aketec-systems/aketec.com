@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Automation &amp; Custom Software | Hutto &amp; Greater Austin, TX | AKETEC</title>
-<meta name="description" content="AKETEC is a Texas engineering firm in Hutto, serving Greater Austin. We measure what repetitive work costs your business, then remove it with AI automation, custom software, and systems integration.">
+<title>AI &amp; Data Modernization | Central Texas | AKETEC</title>
+<meta name="description" content="AKETEC helps Texas organizations eliminate repetitive work, modernize fragmented data, and deploy practical AI systems — for construction and contracting firms, manufacturers, and government and public organizations across Central Texas.">
 <meta name="robots" content="index,follow">
 
 <link rel="icon" type="image/svg+xml" href="assets/logo/mark-primary.svg">
 <link rel="canonical" href="https://aketec.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="AI Automation &amp; Custom Software | Hutto &amp; Greater Austin, TX | AKETEC">
-<meta property="og:description" content="AKETEC is a Texas engineering firm in Hutto, serving Greater Austin. We measure what repetitive work costs your business, then remove it with AI automation, custom software, and systems integration.">
+<meta property="og:title" content="AI &amp; Data Modernization | Central Texas | AKETEC">
+<meta property="og:description" content="AKETEC helps Texas organizations eliminate repetitive work, modernize fragmented data, and deploy practical AI systems — for construction and contracting firms, manufacturers, and government and public organizations across Central Texas.">
 <meta property="og:url" content="https://aketec.com/">
 <meta property="og:image" content="https://aketec.com/assets/img/og-image.png">
 
@@ -64,7 +64,7 @@ header.site{border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:50
 .wordmark .lk-name{fill:currentColor;font-family:"Archivo",sans-serif;font-weight:800}
 .wordmark .lk-sub{fill:var(--slate);font-family:"JetBrains Mono",monospace;font-weight:500}
 @media (max-width:560px){.wordmark .lockup{height:26px}}
-nav.primary{display:flex;align-items:center;gap:24px;font-size:.82rem;font-weight:600;order:2}
+nav.primary{display:flex;align-items:center;gap:22px;font-size:.8rem;font-weight:600;order:2}
 nav.primary a{color:var(--ink-2);text-decoration:none;padding:4px 0;border-bottom:1.5px solid transparent}
 nav.primary a:hover{color:var(--ink);border-bottom-color:var(--brass)}
 .btn{display:inline-block;font-size:.82rem;font-weight:700;padding:11px 20px;border-radius:2px;
@@ -74,8 +74,6 @@ nav.primary a:hover{color:var(--ink);border-bottom-color:var(--brass)}
 .btn.solid{background:var(--brass);color:var(--paper)}
 .btn.solid:hover{background:var(--brass-lit);border-color:var(--brass-lit)}
 .headrow .btn.solid{order:3}
-
-/* ---------- mobile nav toggle ---------- */
 
 .nav-toggle{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
   clip:rect(0,0,0,0);white-space:nowrap;border:0}
@@ -87,7 +85,7 @@ nav.primary a:hover{color:var(--ink);border-bottom-color:var(--brass)}
 .nav-toggle:checked + .nav-toggle-btn .bar-2{opacity:0}
 .nav-toggle:checked + .nav-toggle-btn .bar-3{transform:translateY(-4px) rotate(-45deg)}
 
-@media (max-width:960px){
+@media (max-width:1020px){
   .nav-toggle-btn{display:inline-flex}
   nav.primary{display:none;order:5;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0;
     margin-top:14px;padding-top:10px;border-top:1px solid var(--rule)}
@@ -95,12 +93,19 @@ nav.primary a:hover{color:var(--ink);border-bottom-color:var(--brass)}
   nav.primary a{padding:12px 2px;border-bottom:1px solid var(--rule-soft)}
 }
 
-.hero{padding:80px 0 64px;border-bottom:1px solid var(--rule)}
+.hero{padding:80px 0 46px;border-bottom:1px solid var(--rule)}
 .hero h1{font-size:clamp(2rem,4.4vw,3rem);line-height:1.1;letter-spacing:-.026em;
          font-weight:800;margin:0 0 1.1rem;max-width:19ch;text-wrap:balance}
 .hero h1 .hl{color:var(--brass)}
 .hero .lede{font-size:1.16rem;line-height:1.55;color:var(--ink-2);max-width:60ch;margin-bottom:2rem}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:44px}
+
+.hero-trio{display:grid;gap:16px;padding-top:8px;border-top:1px solid var(--rule-soft)}
+@media (min-width:760px){.hero-trio{grid-template-columns:repeat(3,1fr)}}
+.hero-trio div{padding-top:20px}
+.hero-trio b{display:block;font-family:"Archivo",sans-serif;font-size:.82rem;font-weight:700;
+             color:var(--ink);margin-bottom:.3rem}
+.hero-trio span{font-size:.88rem;color:var(--slate);line-height:1.45;display:block}
 
 .creds{background:var(--paper-2);border-bottom:1px solid var(--rule);padding:22px 0}
 .creds ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 34px;
@@ -115,23 +120,50 @@ section.band{padding:70px 0;border-bottom:1px solid var(--rule)}
              font-weight:700;margin:0 0 .7rem;text-wrap:balance}
 .sec-head p{color:var(--slate);margin:0}
 
-.loss-grid{list-style:none;margin:0;padding:0;display:grid;gap:0 40px}
-@media (min-width:700px){.loss-grid{grid-template-columns:1fr 1fr}}
-.loss-grid li{display:flex;gap:13px;align-items:flex-start;font-size:1.02rem;line-height:1.5;
-  color:var(--ink-2);padding:13px 0;border-bottom:1px solid var(--rule-soft)}
-.loss-grid li::before{content:"—";color:var(--brass);flex:none;font-weight:600}
+.lose-time{display:grid;gap:10px 30px;margin:0 0 26px;padding:0;list-style:none}
+@media (min-width:700px){.lose-time{grid-template-columns:1fr 1fr}}
+.lose-time li{font-size:.98rem;color:var(--ink-2);padding-left:20px;position:relative}
+.lose-time li::before{content:"—";position:absolute;left:0;color:var(--brass)}
+.lose-time-close{font-size:1.02rem;color:var(--ink);font-weight:600;font-family:"Archivo",sans-serif;
+                 max-width:56ch;margin:0}
+
+.tri{display:grid;gap:18px}
+@media (min-width:860px){.tri{grid-template-columns:repeat(3,1fr)}}
 
 .caps{display:grid;gap:18px}
-@media (min-width:800px){.caps{grid-template-columns:1fr 1fr}}
+@media (min-width:860px){.caps{grid-template-columns:repeat(3,1fr)}}
 .cap{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--brass);
-     border-radius:2px;padding:26px;box-shadow:var(--shadow)}
-.cap h3{font-size:1.06rem;font-weight:700;margin:0 0 .6rem;letter-spacing:-.01em}
-.cap p{font-size:.96rem;color:var(--ink-2);margin-bottom:.9rem}
-.cap ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule-soft);
-        padding-top:13px;display:grid;gap:6px}
-.cap li{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--slate);
-        padding-left:15px;position:relative}
-.cap li::before{content:"—";position:absolute;left:0;color:var(--brass)}
+     border-radius:2px;padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+.cap .who{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.09em;
+          text-transform:uppercase;color:var(--brass)}
+.cap h3{font-size:1.1rem;font-weight:700;margin:0;letter-spacing:-.01em}
+.cap p{font-size:.95rem;color:var(--ink-2);margin-bottom:0}
+.chips{list-style:none;padding:10px 0 0;margin:auto 0 0;display:flex;flex-wrap:wrap;gap:7px 8px;
+       border-top:1px solid var(--rule-soft);padding-top:14px}
+.chips li{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.02em;
+          color:var(--slate);background:var(--paper-2);border:1px solid var(--rule-soft);
+          border-radius:2px;padding:4px 8px}
+
+.sector{background:var(--card);border:1px solid var(--rule);border-top:3px solid var(--brass);
+        border-radius:2px;padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+.sector h3{font-size:1.06rem;font-weight:700;margin:0;letter-spacing:-.01em}
+.sector .lead{font-size:.9rem;color:var(--brass);font-weight:600;margin:0}
+.sector p.body{font-size:.94rem;color:var(--ink-2);margin:0}
+.sector .foot{margin-top:auto;padding-top:12px}
+
+.engagements{display:grid;gap:16px}
+@media (min-width:820px){.engagements{grid-template-columns:2fr 1fr 1fr}}
+.eng{border:1px solid var(--rule);border-radius:2px;padding:24px 22px;background:var(--card);
+     display:flex;flex-direction:column;gap:11px}
+.eng.lead{border-color:var(--brass);border-width:1.5px}
+.eng .term{font-family:"JetBrains Mono",monospace;font-size:.71rem;letter-spacing:.07em;
+           text-transform:uppercase;color:var(--brass);font-weight:600}
+.eng h3{font-size:1rem;margin:0;line-height:1.3}
+.eng p{font-size:.93rem;color:var(--ink-2);margin:0}
+.eng .out{margin-top:auto;padding-top:13px;border-top:1px solid var(--rule-soft);
+          font-size:.84rem;color:var(--slate)}
+.eng .out b{color:var(--ink);font-weight:600;font-family:"Archivo",sans-serif;font-size:.72rem;
+            letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:3px}
 
 .diffs{display:grid}
 .diff{display:grid;grid-template-columns:44px 1fr;gap:20px;padding:24px 0;
@@ -147,7 +179,6 @@ section.company{background:var(--ink);color:var(--paper);padding:70px 0}
 section.company .sec-head h2{color:var(--paper)}
 section.company .sec-head p{color:color-mix(in srgb,var(--paper) 62%,transparent)}
 section.company .eyebrow{color:var(--brass-lit)}
-section.company a{color:var(--brass-lit)}
 .datagrid{display:grid;gap:0 40px;border-top:1px solid color-mix(in srgb,var(--paper) 22%,transparent)}
 @media (min-width:720px){.datagrid{grid-template-columns:1fr 1fr}}
 .datum{display:grid;gap:3px;padding:15px 0;margin:0;
@@ -156,7 +187,6 @@ section.company a{color:var(--brass-lit)}
           text-transform:uppercase;font-weight:700;
           color:color-mix(in srgb,var(--paper) 55%,transparent)}
 .datum dd{margin:0;font-size:.88rem;color:var(--paper);font-variant-numeric:tabular-nums;line-height:1.5}
-section.company .placeholder{color:var(--brass-lit);border-bottom-color:var(--brass-lit)}
 .codes-note{margin-top:30px;font-size:.84rem;
             color:color-mix(in srgb,var(--paper) 60%,transparent);max-width:68ch}
 
@@ -182,7 +212,7 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
 <header class="site">
   <div class="shell headrow">
     <a class="wordmark" href="#top" aria-label="AKETEC home">
-      <svg class="lockup" viewBox="0.62 -1.0 470 70.85" role="img" aria-label="AKETEC — AI automation, custom software, digital infrastructure"><g transform="translate(0,-1.62)"><path d="M 4.33,4.33 L 49.74,4.33 L 67.76,22.35 L 67.76,67.76 L 4.33,67.76 Z" fill="none" stroke="currentColor" stroke-width="5.41" stroke-linejoin="miter"/><path d="M 18.02,23.79 L 51.18,23.79" stroke="currentColor" stroke-width="5.41"/><path d="M 28.12,36.05 L 57.67,36.05" class="lk-brass" stroke-width="5.41"/><path d="M 18.02,48.3 L 41.81,48.3" stroke="currentColor" stroke-width="5.41"/></g><text x="96.42" y="39.85" class="lk-name" font-size="58" letter-spacing="7.25">AKETEC</text><text x="99.03" y="68.85" class="lk-sub" font-size="16.24" letter-spacing="3.31">AUTOMATION · SOFTWARE · DATA</text></svg>
+      <svg class="lockup" viewBox="0.62 -1.0 470 70.85" role="img" aria-label="AKETEC — AI &amp; data modernization"><g transform="translate(0,-1.62)"><path d="M 4.33,4.33 L 49.74,4.33 L 67.76,22.35 L 67.76,67.76 L 4.33,67.76 Z" fill="none" stroke="currentColor" stroke-width="5.41" stroke-linejoin="miter"/><path d="M 18.02,23.79 L 51.18,23.79" stroke="currentColor" stroke-width="5.41"/><path d="M 28.12,36.05 L 57.67,36.05" class="lk-brass" stroke-width="5.41"/><path d="M 18.02,48.3 L 41.81,48.3" stroke="currentColor" stroke-width="5.41"/></g><text x="96.42" y="39.85" class="lk-name" font-size="58" letter-spacing="7.25">AKETEC</text><text x="99.03" y="68.85" class="lk-sub" font-size="16.24" letter-spacing="3.31">AI · DATA · MODERNIZATION</text></svg>
     </a>
 
     <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-controls="site-nav">
@@ -194,15 +224,14 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
       </svg>
     </label>
 
-    <a class="btn solid" href="/costmap">Request a Workflow Cost Audit</a>
+    <a class="btn solid" href="costmap/">Talk to AKETEC</a>
 
     <nav class="primary" id="site-nav" aria-label="Primary">
-      <a href="#lose-time">Where time goes</a>
       <a href="#services">Services</a>
-      <a href="/ai-front-office">AI front office</a>
-      <a href="#experience">Experience</a>
-      <a href="#who">Who this is for</a>
-      <a href="#company">Company data</a>
+      <a href="#industries">Industries</a>
+      <a href="#government">Government</a>
+      <a href="#approach">About</a>
+      <a href="#company">Contracting</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -212,12 +241,17 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
 
   <section class="hero">
     <div class="shell">
-      <span class="eyebrow">Texas · Engineering, automation &amp; software</span>
-      <h1>What is your workflow <span class="hl">actually costing you</span>?</h1>
-      <p class="lede">Most of what your operations cost isn't the software — it's the hours around it. The re-keying between systems, the workarounds, the report somebody rebuilds every month. AKETEC measures that cost, then engineers it out with AI automation, custom software, and the infrastructure to hold it together.</p>
+      <span class="eyebrow">Texas · AI · Data · Modernization</span>
+      <h1>Build a <span class="hl">smarter operation</span>.</h1>
+      <p class="lede">AKETEC helps Texas organizations eliminate repetitive work, modernize fragmented data, and deploy practical AI systems that improve how the business actually runs.</p>
       <div class="cta-row">
-        <a class="btn solid" href="/costmap">Request a Workflow Cost Audit</a>
-        <a class="btn" href="#services">What we do</a>
+        <a class="btn solid" href="costmap/">Talk to AKETEC</a>
+        <a class="btn" href="#services">Explore our services</a>
+      </div>
+      <div class="hero-trio">
+        <div><b>AI Operations</b><span>Automate repetitive work and customer interactions.</span></div>
+        <div><b>Data Modernization</b><span>Connect, clean and modernize the information your organization depends on.</span></div>
+        <div><b>Public Sector</b><span>Modernize government systems and deploy AI responsibly.</span></div>
       </div>
     </div>
   </section>
@@ -226,21 +260,21 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
     <div class="shell">
       <ul>
         <li data-c="chamber">Hutto Chamber of Commerce member</li>
-        <li><span data-c="city">Hutto</span>, <span data-c="state">Texas</span> · Greater Austin · Texas · Nationwide</li>
+        <li>Central Texas · Nationwide delivery</li>
         <li>Small business · LLC · US-based delivery</li>
       </ul>
     </div>
   </div>
 
-  <!-- ============ WHERE BUSINESSES LOSE TIME ============ -->
+  <!-- ============ WHERE OPERATIONS LOSE TIME ============ -->
   <section class="band" id="lose-time">
     <div class="shell">
       <div class="sec-head">
-        <span class="eyebrow">Where businesses lose time</span>
-        <h2>Where business process automation actually starts</h2>
+        <span class="eyebrow">Sound familiar?</span>
+        <h2>Where operations lose time</h2>
+        <p>Most of what an operation costs isn't the software — it's the hours around it.</p>
       </div>
-
-      <ul class="loss-grid">
+      <ul class="lose-time">
         <li>Staff answering the same questions over and over</li>
         <li>Copying information from emails into another system</li>
         <li>Scheduling and rescheduling appointments by hand</li>
@@ -251,8 +285,7 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
         <li>Moving data between two systems that do not talk to each other</li>
         <li>Running an internal process through an email thread</li>
       </ul>
-
-      <p style="margin-top:26px;font-size:1.02rem;color:var(--ink-2);max-width:66ch">If your team does the same computer task over and over, there is probably an opportunity to automate it.</p>
+      <p class="lose-time-close">If your team does the same computer task over and over, there is probably an opportunity to automate it.</p>
     </div>
   </section>
 
@@ -261,118 +294,139 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
     <div class="shell">
       <div class="sec-head">
         <span class="eyebrow">Services</span>
-        <h2>Workflow automation, custom software, and systems integration</h2>
-        <p>Four ways we work — most engagements combine two or three. We start by understanding the work, not by picking a technology.</p>
+        <h2>Three things we do</h2>
+        <p>Software is how we deliver these — not a fourth thing we sell. We start by understanding the work, not by picking a technology.</p>
       </div>
 
       <div class="caps">
         <article class="cap">
-          <h3>AI Automation &amp; Process Engineering</h3>
-          <p>We map how work actually moves through your operation — including the manual bridges between the systems you already pay for — and build the automation that removes them. AI where it genuinely fits, simpler tools where it doesn't.</p>
-          <ul>
-            <li>Process mapping and manual-effort measurement</li>
-            <li>Workflow automation and system-to-system handoffs</li>
-            <li>Document and data processing pipelines</li>
-            <li>Predictive and analytical models where data supports them</li>
-          </ul>
-          <p style="font-size:.93rem;margin-top:13px">Front-office work — calls, scheduling, intake, email — handled automatically and connected to the systems you already use. → <a href="/ai-front-office">See AI front office</a></p>
-        </article>
-
-        <article class="cap">
-          <h3>Custom Software Development</h3>
-          <p>When off-the-shelf software doesn't fit the way you work, we build what does — internal tools, customer-facing applications, and the interfaces that connect them. Built to be maintained, documented so someone else could pick it up.</p>
-          <ul>
-            <li>Web and mobile application development</li>
-            <li>Internal tools, portals and dashboards</li>
-            <li>API design and integration layers</li>
-            <li>Modernization and replacement of legacy applications</li>
+          <span class="who">AI Operations &amp; Automation</span>
+          <h3>Put AI to work inside your operation.</h3>
+          <p>We design AI-powered systems that handle repetitive administrative work, connect existing software, and help your team respond faster without adding headcount. From intelligent reception and customer intake to document processing, scheduling, internal knowledge assistants and workflow automation, AKETEC builds systems around the way your organization actually works.</p>
+          <ul class="chips">
+            <li>AI voice reception</li><li>Customer/member intake</li><li>Workflow automation</li>
+            <li>Document intelligence</li><li>Internal AI assistants</li><li>Scheduling &amp; routing</li>
+            <li>CRM/system integration</li>
           </ul>
         </article>
 
         <article class="cap">
-          <h3>Digital Infrastructure &amp; Integration</h3>
-          <p>The layer everything else depends on: databases, cloud environments, and the connections between the systems you already run. Most automation projects fail here first, so this is where we look first.</p>
-          <ul>
-            <li>Cloud environments on AWS, Azure and GCP</li>
-            <li>Database design, migration and administration</li>
-            <li>Systems integration across existing platforms</li>
-            <li>Access control, backup and operational resilience</li>
+          <span class="who">Data Modernization &amp; Intelligence</span>
+          <h3>Turn fragmented data into usable intelligence.</h3>
+          <p>AI is only as useful as the information underneath it. AKETEC helps organizations clean, migrate, connect and modernize data spread across legacy databases, spreadsheets, applications and disconnected systems. We build the data foundation required for reliable reporting, automation and AI.</p>
+          <ul class="chips">
+            <li>Data migration</li><li>SQL/database modernization</li><li>System integration</li>
+            <li>ETL pipelines</li><li>Data quality</li><li>Business intelligence</li>
+            <li>Dashboards</li><li>AI-ready architecture</li>
           </ul>
         </article>
 
         <article class="cap">
-          <h3>Data &amp; Records Engineering</h3>
-          <p>Our technical specialty, and the reason the rest holds up. Data warehousing, lineage and governance — plus cryptographic audit trails for records whose integrity has to be demonstrable rather than asserted.</p>
-          <ul>
-            <li>ETL pipelines and data warehousing</li>
-            <li>Data inventory, classification and lineage</li>
-            <li>Tamper-evident logging and cryptographic provenance</li>
-            <li>Blockchain and Web3 application development</li>
-            <li>Reporting and business intelligence</li>
+          <span class="who">Public Sector Modernization</span>
+          <h3>Modern technology for public service.</h3>
+          <p>AKETEC helps government and public organizations modernize legacy systems, improve data operations and introduce AI responsibly. We support modernization from assessment through implementation — with documented architecture, governance and measurable operational outcomes.</p>
+          <ul class="chips">
+            <li>Legacy modernization</li><li>AI implementation</li><li>AI system inventories</li>
+            <li>Data governance</li><li>Workflow modernization</li><li>Digital accessibility</li>
+            <li>Audit-ready systems</li>
           </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ WORKFLOW COST AUDIT ============ -->
-  <section class="band" id="audit">
+  <!-- ============ INDUSTRIES ============ -->
+  <section class="band" id="industries">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="eyebrow">Industries</span>
+        <h2>Built around three sectors</h2>
+        <p>AKETEC can serve more than these three. We don't advertise all of them — these are where the fit is strongest right now.</p>
+      </div>
+
+      <div class="tri">
+        <article class="sector">
+          <span class="lead">Construction &amp; Contractors</span>
+          <h3>AI and data systems for companies that build.</h3>
+          <p class="body">Automate front-office work, customer intake, documents, opportunity workflows, reporting and operational data — without replacing every system you already use.</p>
+        </article>
+
+        <article class="sector">
+          <span class="lead">Advanced Manufacturing &amp; Industrial</span>
+          <h3>Modernize the information behind your operation.</h3>
+          <p class="body">Connect operational data, automate document-heavy workflows, create internal knowledge systems and give teams faster access to the information they need.</p>
+        </article>
+
+        <article class="sector" id="government">
+          <span class="lead">Government &amp; Public Organizations</span>
+          <h3>Responsible modernization built for public environments.</h3>
+          <p class="body">Legacy applications, fragmented data and emerging AI requirements demand more than another software license. AKETEC helps organizations assess, modernize and implement systems they can operate and defend.</p>
+          <div class="foot"><a class="btn" href="#company">Corporate data &amp; codes</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ENTRY OFFER ============ -->
+  <section class="band" id="engagements">
     <div class="shell">
       <div class="sec-head">
         <span class="eyebrow">Start here</span>
-        <h2>Request a Workflow Cost Audit</h2>
-        <p>Show us one workflow that eats too much staff time. We will tell you what it is costing you and what can realistically be automated.</p>
+        <h2>AI &amp; Operations Assessment</h2>
+        <p>A focused assessment of where AI, automation and better data can create measurable operational value. We examine workflows, systems and information bottlenecks, identify practical opportunities, and give you a prioritized implementation roadmap.</p>
       </div>
-      <div class="cta-row">
-        <a class="btn solid" href="/costmap">Request a Workflow Cost Audit</a>
+
+      <div class="engagements">
+        <article class="eng lead">
+          <span class="term">Fixed price · No sales call</span>
+          <h3>AI &amp; Operations Assessment</h3>
+          <p>Our entry point for businesses. We map how work actually moves through your operation, count the hours going into repetitive steps, and identify what's realistic to automate first.</p>
+          <div class="out"><b>You receive</b> Workflow map, AI/automation opportunities, data/system gaps, recommended architecture, implementation priorities, estimated effort</div>
+          <div class="out"><a class="btn solid" href="costmap/">Talk to AKETEC</a></div>
+        </article>
+
+        <article class="eng">
+          <span class="term">For government buyers</span>
+          <h3>Modernization Readiness Assessment</h3>
+          <p>Same underlying methodology, scoped for agencies carrying legacy systems and emerging AI governance requirements.</p>
+        </article>
+
+        <article class="eng">
+          <span class="term">For data-heavy clients</span>
+          <h3>Data Modernization Assessment</h3>
+          <p>Same underlying methodology, scoped for organizations whose first bottleneck is fragmented or unreliable data.</p>
+        </article>
       </div>
-      <p style="font-size:.95rem;color:var(--ink-2);margin-top:18px">One workflow, fixed price, four weeks — $2,500</p>
+
+      <p style="margin-top:26px;font-size:.95rem;color:var(--slate);max-width:70ch">We don't publish savings percentages, because we don't know yours yet. The assessment exists to find that number honestly — and if it turns out the manual work isn't costing enough to justify building anything, we will tell you that and you'll have the analysis to prove it.</p>
     </div>
   </section>
 
-  <!-- ============ SELECTED EXPERIENCE ============ -->
-  <section class="band" id="experience">
+  <!-- ============ ENGINEERING BEHIND THE AI ============ -->
+  <section class="band" id="approach">
     <div class="shell">
       <div class="sec-head">
-        <span class="eyebrow">Selected experience</span>
-        <h2>Work already in production</h2>
+        <span class="eyebrow">About</span>
+        <h2>Engineering behind the AI</h2>
+        <p>AI is easy to demonstrate. Reliable operational systems are harder. AKETEC combines AI with more than fifteen years of data and software engineering experience to build systems that integrate with real operations, real data and existing technology.</p>
       </div>
 
       <div class="diffs">
         <div class="diff"><span class="mk">01</span><div>
-          <h3>Automation in production</h3>
-          <p>Automated client data onboarding and SQL transformation workflows at a national political-data platform, cutting manual processing time by 30% and accelerating client go-live timelines.</p>
+          <h3>Engineering-led delivery</h3>
+          <p>The person who understands the problem stays involved in building the solution.</p>
         </div></div>
 
         <div class="diff"><span class="mk">02</span><div>
-          <h3>Regulated data, fully auditable</h3>
-          <p>Built reconciliation and data-quality systems for Medicare reimbursement data (APC, DRG, ESRD), achieving 100% auditability across complex regulatory datasets.</p>
+          <h3>Measure before building</h3>
+          <p>We identify the operational problem and expected business impact before recommending technology.</p>
         </div></div>
 
         <div class="diff"><span class="mk">03</span><div>
-          <h3>Legacy systems modernised</h3>
-          <p>Engineered star-schema warehouses and SSIS/SSRS pipelines integrating mainframe and non-mainframe systems for aerospace production analytics.</p>
-        </div></div>
-
-        <div class="diff"><span class="mk">04</span><div>
-          <h3>Nuru — Web3 Intelligence</h3>
-          <p>Engineered the AI, identity, wallet, and real-time voice infrastructure behind a production Web3 Intelligence mobile platform.</p>
+          <h3>Built to be owned</h3>
+          <p>Systems are documented, maintainable and designed so the customer remains in control of its technology and data.</p>
         </div></div>
       </div>
-
-      <p style="margin-top:6px;font-size:1rem;color:var(--ink-2);max-width:68ch">Fifteen years engineering data systems across healthcare, aerospace, telecommunications, political technology, and blockchain. The engineer who assesses your systems is the one who builds the fix.</p>
-    </div>
-  </section>
-
-  <!-- ============ WHO THIS IS FOR ============ -->
-  <section class="band" id="who">
-    <div class="shell">
-      <div class="sec-head">
-        <span class="eyebrow">Who this is for</span>
-        <h2>If this sounds like you</h2>
-      </div>
-
-      <p style="font-size:1.05rem;color:var(--ink-2);max-width:70ch">Professional services · Healthcare and dental practices · Contractors and home services · Property management · Legal and accounting firms · Nonprofits and membership organizations · Logistics and operations · Local government and public agencies</p>
     </div>
   </section>
 
@@ -380,7 +434,7 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
   <section class="company" id="company">
     <div class="shell">
       <div class="sec-head">
-        <span class="eyebrow">Corporate data</span>
+        <span class="eyebrow">Contracting</span>
         <h2>For procurement and prime contractors</h2>
         <p>Everything a contracting officer or supplier-diversity team needs, on one screen. <a href="assets/docs/aketec-capability-statement.pdf" target="_blank" rel="noopener">Download the capability statement (PDF)</a>.</p>
       </div>
@@ -389,10 +443,9 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
         <dl class="datum"><dt>Registered legal entity</dt><dd data-c="legalEntity">Alkebuleum Technology LLC</dd></dl>
         <dl class="datum"><dt>Operating name</dt><dd data-c="operatingName">AKETEC</dd></dl>
         <dl class="datum"><dt>Unique Entity ID (UEI)</dt><dd data-c="uei">P97FZE6L9LK7</dd></dl>
-        <dl class="datum"><dt>CAGE code</dt><dd><span class="placeholder" data-c="cage">Not yet assigned — issued by DLA during SAM registration</span></dd></dl>
+        <dl class="datum"><dt>CAGE code</dt><dd data-c="cage">Not yet assigned — issued by DLA during SAM registration</dd></dl>
         <dl class="datum"><dt>Business type</dt><dd data-c="businessType">Small business · LLC · State of Texas · Est. 2024</dd></dl>
-        <dl class="datum"><dt>SAM.gov status</dt><dd data-c="samStatus">UEI assigned · SAM.gov registration in progress</dd></dl>
-        <dl class="datum"><dt>Texas CMBL</dt><dd><span class="placeholder" data-c="cmbl">Texas CMBL registration in progress</span></dd></dl>
+        <dl class="datum"><dt>Registrations</dt><dd data-c="samStatus">UEI assigned · SAM.gov registration in progress</dd></dl>
         <dl class="datum"><dt>NAICS</dt><dd data-c="naics">541511 (primary) · 541512 · 541519 · 541611 · 541690 · 518210</dd></dl>
         <dl class="datum"><dt>PSC</dt><dd data-c="psc">DA01 · DF01 · DJ01 · DC01</dd></dl>
         <dl class="datum"><dt>Contract types</dt><dd data-c="contractTypes">Firm-fixed-price · Labor-hour · T&amp;M · Prime or subcontractor</dd></dl>
@@ -401,7 +454,7 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
         <dl class="datum"><dt>Point of contact</dt><dd><span data-c="contactName">Ernesto Herbert</span>, <span data-c="contactTitle">Founder / CEO</span> · <a data-c="email" data-c-href="email" href="mailto:info@aketec.com">info@aketec.com</a></dd></dl>
       </div>
 
-      <p class="codes-note">Insurance: <span data-c="insurance">General liability, professional liability (E&amp;O), and cyber liability bound prior to contract award. Certificates furnished on request.</span></p>
+      <p class="codes-note">Insurance: <span data-c="insurance">General liability, professional liability (E&amp;O), and cyber liability bound prior to contract award. Certificates furnished on request.</span> AKETEC accepts firm-fixed-price, labor-hour and time-and-materials arrangements, and is available as a subcontractor to prime contract holders.</p>
     </div>
   </section>
 
@@ -412,8 +465,8 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
         <div>
           <span class="eyebrow">Contact</span>
           <h2 style="font-family:Archivo,sans-serif;font-size:clamp(1.5rem,3vw,2rem);line-height:1.16;letter-spacing:-.02em;font-weight:700;margin:0 0 .7rem;">Start with a conversation, not a proposal</h2>
-          <p>Tell us what your team is spending too much time on, or which system is holding you back. If an audit is the right first step we'll say so and quote it. If it isn't, we'll tell you that too — we'd rather pass on work than sell you a document you don't need.</p>
-          <p>We're in Hutto, so an in-person conversation anywhere in the Austin area is easy. We respond within one business day.</p>
+          <p>Tell us what your team is spending too much time on, or which systems aren't talking to each other. If an assessment is the right first step we'll say so and quote it. If it isn't, we'll tell you that too — we'd rather pass on work than sell you a document you don't need.</p>
+          <p>We're based in Central Texas, so an in-person conversation anywhere in the Austin area is easy. We respond within one business day.</p>
         </div>
 
         <div class="contact-lines">
@@ -434,7 +487,7 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
 
 <footer class="site">
   <div class="shell footrow">
-    <span class="legal"><span data-c="operatingName">AKETEC</span> · Automation, software &amp; data engineering · <span data-c="city">Hutto</span>, <span data-c="state">Texas</span></span>
+    <span class="legal"><span data-c="operatingName">AKETEC</span> · AI &amp; Data Modernization · Central Texas</span>
     <span class="legal">&copy; 2024–2026 <span data-c="operatingName">AKETEC</span></span>
   </div>
 </footer>
