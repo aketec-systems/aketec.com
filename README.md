@@ -25,9 +25,8 @@ keep it in sync with `company.js` by hand if you ever edit one without the
 other, but the module is the source of truth. Do not hardcode a company
 fact anywhere else; add a `data-c` tag and a field on the module instead.
 
-Fields still showing a dotted brass underline (`<span class="placeholder">`)
-are intentionally incomplete or unverified — CAGE code and Texas CMBL
-status are still pending. Search for `class="placeholder"` to find them.
+If a fact is ever incomplete or unverified, wrap it in
+`<span class="placeholder">` (dotted brass underline) until it is confirmed.
 
 ## Deploy
 

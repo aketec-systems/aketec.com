@@ -8,8 +8,8 @@
  * of getting Google to represent AKETEC properly (name, address, phone,
  * service area, same-as identity) — the front-facing action buttons
  * (Call, Directions) in search results come from the Google Business
- * Profile, not from page markup; that profile is created separately and
- * is pending Google's verification.
+ * Profile, not from page markup. That profile is live; keep its name,
+ * address and phone identical to company.js.
  */
 (function () {
   function inject() {

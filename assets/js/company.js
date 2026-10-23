@@ -17,23 +17,25 @@
     city: "Hutto",
     state: "Texas",
     postalCode: "78634",
-    // [VERIFY] formation year — see website brief.md section 2, item 2
     businessType: "Small business · LLC · State of Texas · Est. 2024",
     chamber: "Hutto Chamber of Commerce member",
     coverage: "Central Texas on-site · Nationwide remote delivery",
-    // Set by Ernesto (commit 165891e). NOTE: the capability statement PDF
-    // (assets/docs/aketec-capability-statement.pdf) still reads "Pending
-    // SAM.gov registration" for both UEI and CAGE — that PDF is stale
-    // relative to this value and should be regenerated. Flagged in report,
-    // not corrected here (binary asset, outside this repo's frontend scope).
+    // Confirmed active by SAM.gov email 2026-10-23; CAGE assigned by DLA.
+    // Matches assets/docs/aketec-capability-statement.pdf.
     uei: "P97FZE6L9LK7",
-    cage: "Not yet assigned — issued by DLA during SAM registration",
+    cage: "258P2",
     // Exact required phrasing — see the CRITICAL block in brief section 2.
-    // Never render "SAM.gov registered", "federally registered", or
-    // "government/federal contractor" anywhere on the site.
-    samStatus: "UEI assigned · SAM.gov registration in progress",
-    // [VERIFY] Texas CMBL status — see website brief.md section 2, item 2
-    cmbl: "Texas CMBL registration in progress",
+    // Registration renews annually; if it ever lapses, change this the same
+    // day. Never render "government/federal contractor", awards, or past
+    // performance anywhere on the site.
+    samStatus: "SAM.gov registration active",
+    // Annual renewal date from the SAM.gov entity record (2027-09-10).
+    // Update after each renewal.
+    samExpires: "September 10, 2027",
+    // Filed 2026-10-23 (CMBL vendor no. on file — not published here, since
+    // the Texas vendor number embeds the EIN). Registration, not HUB
+    // certification; do not describe it as "certified".
+    cmbl: "Texas CMBL registered",
     naics: "541511 (primary) · 541512 · 541519 · 541611 · 541690 · 518210",
     psc: "DA01 · DF01 · DJ01 · DC01",
     contractTypes: "Firm-fixed-price · Labor-hour · T&M · Prime or subcontractor",
