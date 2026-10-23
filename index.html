@@ -148,7 +148,7 @@ section.band{padding:70px 0;border-bottom:1px solid var(--rule)}
 .sector .foot{margin-top:auto;padding-top:12px}
 
 .built{display:grid;gap:18px}
-@media (min-width:760px){.built{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:760px){.built{grid-template-columns:repeat(2,1fr)}.built .feature{grid-column:1 / -1}}
 .go{margin-top:auto;padding-top:13px;border-top:1px solid var(--rule-soft);
     font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.02em;overflow-wrap:anywhere}
 .go a{color:var(--brass);text-decoration:none;font-weight:600}
@@ -339,42 +339,49 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
     </div>
   </section>
 
-  <!-- ============ BUILT & OPERATED ============ -->
+  <!-- ============ BUILT BY AKETEC ============ -->
   <section class="band" id="built">
     <div class="shell">
       <div class="sec-head">
         <span class="eyebrow">Our platforms</span>
-        <h2>Built &amp; operated by AKETEC</h2>
-        <p>AKETEC doesn't only advise on platforms — we build and run our own. The Alkebuleum ecosystem below was designed, engineered, and is operated by AKETEC, in production today.</p>
+        <h2>Built by AKETEC</h2>
+        <p>AKETEC doesn't only advise on platforms — we build our own: AI applications, secure data infrastructure and verifiable records. Three are in production today; two are in active development.</p>
       </div>
 
       <div class="built">
-        <article class="cap">
-          <span class="who">Distributed ledger</span>
-          <h3>Alkebuleum Network</h3>
-          <p>A production distributed-ledger network designed, built, and operated by AKETEC. Tamper-evident, independently verifiable record-keeping, running in production.</p>
-          <div class="go"><a href="https://alkescan.com" target="_blank" rel="noopener">View the live ledger → alkescan.com</a></div>
+        <article class="cap feature">
+          <span class="who">Institutional records &amp; AI · In production</span>
+          <h3>Scribb</h3>
+          <p>AKETEC's institutional record-keeping platform. Organizations capture financial records, board decisions, contracts, compliance files and memberships in one place. Scribb flags missing information, approaching deadlines and risks, prepares audit, board, grant and tax reports from records already captured, and seals approved records with tamper-evident cryptographic proof.</p>
+          <div class="go"><a href="https://scribb.net" target="_blank" rel="noopener">scribb.net →</a></div>
         </article>
 
         <article class="cap">
-          <span class="who">Secure mobile platform</span>
+          <span class="who">AI platform · In production</span>
           <h3>Nuru</h3>
-          <p>Our production mobile platform, live on Google Play and the App Store: a secure digital wallet with user-held keys, communities, messaging, and AI assistance in one place.</p>
+          <p>Our production AI-assisted mobile platform, live on Google Play and the App Store: an AI assistant alongside secure messaging, communities, and a digital wallet with user-held keys.</p>
           <div class="go"><a href="https://nuru.si" target="_blank" rel="noopener">nuru.si →</a></div>
         </article>
 
         <article class="cap">
-          <span class="who">Digital-asset exchange</span>
-          <h3>JollofSwap</h3>
-          <p>A digital-asset exchange running on the Alkebuleum network, with users holding their own keys throughout.</p>
-          <div class="go"><a href="https://jollofswap.com" target="_blank" rel="noopener">jollofswap.com →</a></div>
+          <span class="who">Distributed ledger · In production</span>
+          <h3>Alkebuleum Network</h3>
+          <p>A distributed-ledger network designed, built, and operated by AKETEC. Tamper-evident, independently verifiable record-keeping, with a public explorer that indexes every transaction on the live network.</p>
+          <div class="go"><a href="https://alkescan.com" target="_blank" rel="noopener">View the live ledger → alkescan.com</a></div>
         </article>
 
         <article class="cap">
-          <span class="who">Ledger explorer</span>
-          <h3>AlkéScan</h3>
-          <p>The Alkebuleum ledger explorer: continuous ingestion, validation, and indexing of every transaction and ledger update on the live network — a public audit trail anyone can check.</p>
-          <div class="go"><a href="https://alkescan.com" target="_blank" rel="noopener">alkescan.com →</a></div>
+          <span class="who">Sovereign AI · Open-source prototype</span>
+          <h3>Nuru Sovereign Runtime</h3>
+          <p>A model-agnostic AI runtime that keeps an agent's identity and memory on infrastructure the user controls. A privacy gateway strips out what doesn't need to leave before any request reaches an external model. Early-stage (v0.1), Apache-2.0.</p>
+          <div class="go"><a href="https://github.com/Alkebuleum/nuru-sovereign-runtime" target="_blank" rel="noopener">github.com/Alkebuleum/nuru-sovereign-runtime →</a></div>
+        </article>
+
+        <article class="cap">
+          <span class="who">Verifiable records · In development</span>
+          <h3>DRIS</h3>
+          <p>Digital records infrastructure for issuing and verifying institutional documents — diplomas, deeds, certificates, contracts and public records — with tamper-evident proof anchored to the Alkebuleum Network.</p>
+          <div class="go"><a href="https://dris.cc" target="_blank" rel="noopener">dris.cc →</a></div>
         </article>
       </div>
     </div>
