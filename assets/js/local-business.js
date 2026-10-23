@@ -48,7 +48,10 @@
             "Austin, TX",
             "Texas"
           ],
-          "sameAs": ["https://www.linkedin.com/company/aketec/"]
+          "sameAs": [
+            "https://www.linkedin.com/company/aketec/",
+            "https://github.com/aketec-systems"
+          ]
         }
       ]
     };

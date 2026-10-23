@@ -147,6 +147,13 @@ section.band{padding:70px 0;border-bottom:1px solid var(--rule)}
 .sector p.body{font-size:.94rem;color:var(--ink-2);margin:0}
 .sector .foot{margin-top:auto;padding-top:12px}
 
+.built{display:grid;gap:18px}
+@media (min-width:760px){.built{grid-template-columns:repeat(2,1fr)}}
+.go{margin-top:auto;padding-top:13px;border-top:1px solid var(--rule-soft);
+    font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.02em;overflow-wrap:anywhere}
+.go a{color:var(--brass);text-decoration:none;font-weight:600}
+.go a:hover{text-decoration:underline}
+
 .engagements{display:grid;gap:16px}
 @media (min-width:820px){.engagements{grid-template-columns:2fr 1fr 1fr}}
 .eng{border:1px solid var(--rule);border-radius:2px;padding:24px 22px;background:var(--card);
@@ -332,6 +339,68 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
     </div>
   </section>
 
+  <!-- ============ BUILT & OPERATED ============ -->
+  <section class="band" id="built">
+    <div class="shell">
+      <div class="sec-head">
+        <span class="eyebrow">Our platforms</span>
+        <h2>Built &amp; operated by AKETEC</h2>
+        <p>AKETEC doesn't only advise on platforms — we build and run our own. The Alkebuleum ecosystem below was designed, engineered, and is operated by AKETEC, in production today.</p>
+      </div>
+
+      <div class="built">
+        <article class="cap">
+          <span class="who">Distributed ledger</span>
+          <h3>Alkebuleum Network</h3>
+          <p>A production distributed-ledger network designed, built, and operated by AKETEC. Tamper-evident, independently verifiable record-keeping, running in production.</p>
+          <div class="go"><a href="https://alkescan.com" target="_blank" rel="noopener">View the live ledger → alkescan.com</a></div>
+        </article>
+
+        <article class="cap">
+          <span class="who">Secure mobile platform</span>
+          <h3>Nuru</h3>
+          <p>Our production mobile platform, live on Google Play and the App Store: a secure digital wallet with user-held keys, communities, messaging, and AI assistance in one place.</p>
+          <div class="go"><a href="https://nuru.si" target="_blank" rel="noopener">nuru.si →</a></div>
+        </article>
+
+        <article class="cap">
+          <span class="who">Digital-asset exchange</span>
+          <h3>JollofSwap</h3>
+          <p>A digital-asset exchange running on the Alkebuleum network, with users holding their own keys throughout.</p>
+          <div class="go"><a href="https://jollofswap.com" target="_blank" rel="noopener">jollofswap.com →</a></div>
+        </article>
+
+        <article class="cap">
+          <span class="who">Ledger explorer</span>
+          <h3>AlkéScan</h3>
+          <p>The Alkebuleum ledger explorer: continuous ingestion, validation, and indexing of every transaction and ledger update on the live network — a public audit trail anyone can check.</p>
+          <div class="go"><a href="https://alkescan.com" target="_blank" rel="noopener">alkescan.com →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPEN SOURCE & CLIENT WORK ============ -->
+  <section class="band" id="work">
+    <div class="shell">
+      <div class="built">
+        <article class="sector" id="open-source">
+          <span class="lead">Open source</span>
+          <h3>Digital ledger &amp; sovereign AI</h3>
+          <p class="body">AKETEC contributes to open-source projects in digital ledger technology and sovereign AI. Our code is public because our claims should be checkable. Projects include Nuru Sovereign Runtime, AlkeLedger and AmVault Connect.</p>
+          <div class="go">GitHub: <a href="https://github.com/aketec-systems" target="_blank" rel="noopener">github.com/aketec-systems</a> · <a href="https://github.com/Alkebuleum" target="_blank" rel="noopener">github.com/Alkebuleum</a></div>
+        </article>
+
+        <article class="sector" id="client-work">
+          <span class="lead">Client work</span>
+          <h3>Liberian Association of Austin Texas (LAAT)</h3>
+          <p class="body">AKETEC designed, built, and manages the digital home of this Austin community nonprofit: membership tiers and dues, events and RSVPs, scholarship and welfare programs, a financial transparency portal, and a member workspace. A community platform that has to be trusted — and easy for non-technical administrators to run.</p>
+          <div class="go"><a href="https://laataustin.org" target="_blank" rel="noopener">laataustin.org →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ INDUSTRIES ============ -->
   <section class="band" id="industries">
     <div class="shell">
@@ -405,7 +474,7 @@ footer.site .legal{font-family:"JetBrains Mono",monospace;font-size:.72rem}
       <div class="sec-head">
         <span class="eyebrow">About</span>
         <h2>Engineering behind the AI</h2>
-        <p>AI is easy to demonstrate. Reliable operational systems are harder. AKETEC combines AI with more than fifteen years of data and software engineering experience to build systems that integrate with real operations, real data and existing technology.</p>
+        <p>AKETEC is the engineering firm behind the Alkebuleum distributed-ledger ecosystem and the platforms above. The company is led by its founder, Ernesto Herbert, whose fifteen years of data and software engineering span healthcare, aerospace, telecommunications, and political technology. AI is easy to demonstrate. Reliable operational systems are harder — AKETEC combines both records to build systems that integrate with real operations, real data, and existing technology.</p>
       </div>
 
       <div class="diffs">

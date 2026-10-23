@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>AKETEC Capability Statement (source)</title>
+<!--
+  Source for assets/docs/aketec-capability-statement.pdf.
+  Rebuild after any edit (US Letter, one page):
+    msedge --headless --disable-gpu --no-pdf-header-footer --virtual-time-budget=15000 ^
+      --print-to-pdf="assets/docs/aketec-capability-statement.pdf" assets/docs/src/capability-statement.html
+  Keep every fact identical to assets/js/company.js and the homepage.
+  Verified registration facts (UEI, CAGE, NAICS/PSC, SAM/CMBL line, contract
+  types, coverage, insurance) must not change without a source document.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400&display=block" rel="stylesheet">
+<style>
+@page{size:letter;margin:0}
+:root{
+  --paper:#F5F2EA; --ink:#17150F; --ink-2:#3D3930; --slate:#5F5A4C; --mute:#8B857A;
+  --brass:#966D22; --brass-lit:#C9A055; --rule:#D7D0BF; --night-rule:#2C2921; --night-rule-2:#3A362D;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{width:8.5in;height:11in;overflow:hidden;color:var(--ink);font-family:"Source Serif 4",Georgia,serif}
+a{color:inherit;text-decoration:none}
+.page{position:relative;width:8.5in;height:11in;display:flex;flex-direction:column;border-top:6.24pt solid var(--brass)}
+.pad{padding:0 39.6pt}
+.mono{font-family:"JetBrains Mono",monospace}
+.arch{font-family:"Archivo",sans-serif}
+
+/* header */
+.head{display:flex;justify-content:space-between;align-items:flex-start;padding-top:26pt;padding-bottom:10pt;border-bottom:.72pt solid var(--ink)}
+.brand{display:flex;align-items:center;gap:7pt}
+.brand svg{width:18.6pt;height:18.6pt}
+.brand .name{font-family:"Archivo";font-weight:800;font-size:14.9pt;letter-spacing:1.86pt;line-height:1}
+.brand .tag{font-family:"JetBrains Mono";font-weight:500;font-size:4.17pt;letter-spacing:.85pt;color:var(--slate);margin-top:3pt}
+.doc{text-align:right}
+.doc .t{font-family:"Archivo";font-weight:600;font-size:7.2pt;letter-spacing:1.2pt}
+.doc .c{font-family:"JetBrains Mono";font-size:6.24pt;letter-spacing:.14pt;color:var(--slate);line-height:1.55;margin-top:4pt}
+
+.lede{font-size:11pt;margin-top:10pt}
+.intro{font-size:7.2pt;line-height:1.4;color:var(--ink-2);margin-top:6pt}
+
+/* section labels */
+.sec{margin-top:9pt}
+.label{font-family:"Archivo";font-weight:600;font-size:6.5pt;letter-spacing:1pt;color:var(--brass);text-transform:uppercase;
+       padding-bottom:4.5pt;border-bottom:.48pt solid var(--rule)}
+
+/* competencies — three columns */
+.comps{display:grid;grid-template-columns:repeat(3,1fr);gap:0 16pt;margin-top:7pt}
+.comp::before{content:"";display:block;width:12.5pt;border-top:1.2pt solid var(--brass);margin-bottom:5pt}
+.comp h3{font-family:"Archivo";font-weight:700;font-size:7.6pt;letter-spacing:-.05pt}
+.comp ul{list-style:none;margin-top:3.5pt}
+.comp li{font-family:"JetBrains Mono";font-size:5.6pt;color:var(--ink-2);line-height:1.35;padding-left:7pt;position:relative;margin-top:1.6pt}
+.comp li::before{content:"·";position:absolute;left:1pt;color:var(--brass);font-size:6.2pt}
+
+/* company experience */
+.exp{display:grid;grid-template-columns:1.08fr 1fr;gap:0 22pt;margin-top:7pt}
+.exp h4{font-family:"Archivo";font-weight:700;font-size:6.5pt;letter-spacing:-.02pt}
+.exp h4::before{content:"";display:block;width:9.6pt;border-top:.96pt solid var(--brass);margin-bottom:4pt}
+.exp .item{font-size:6pt;line-height:1.38;color:var(--slate);margin-top:2.6pt}
+.exp .item b{font-family:"Archivo";font-weight:700;color:var(--ink);font-size:6.1pt}
+.exp .url{font-family:"JetBrains Mono";font-size:5.3pt;color:var(--brass);white-space:nowrap}
+.exp .block + .block{margin-top:5pt}
+
+/* differentiators */
+.diffs{list-style:none;margin-top:6pt}
+.diffs li{display:flex;gap:5.3pt;align-items:baseline;margin-top:3.5pt;font-size:6.48pt;color:var(--slate);line-height:1.3}
+.diffs li::before{content:"";flex:0 0 5.3pt;border-top:.96pt solid var(--brass);transform:translateY(-2.2pt)}
+.diffs b{font-family:"Archivo";font-weight:700;color:var(--ink);font-size:6.72pt;letter-spacing:-.02pt;margin-right:3pt}
+
+/* personnel */
+.who{font-size:6.5pt;line-height:1.4;color:var(--ink-2);margin-top:6pt}
+.prior{font-family:"JetBrains Mono";font-size:5pt;letter-spacing:.5pt;text-transform:uppercase;color:var(--mute);margin-top:5pt}
+.boxes{display:grid;grid-template-columns:1fr 1fr;gap:5pt 22pt;margin-top:4pt}
+.box::before{content:"";display:block;width:9.6pt;border-top:.96pt solid var(--brass);margin-bottom:4pt}
+.box h4{font-family:"Archivo";font-weight:700;font-size:6.5pt;letter-spacing:-.02pt}
+.box p{font-size:6pt;line-height:1.38;color:var(--slate);margin-top:2pt}
+
+/* corporate data */
+.spacer{flex:1}
+.night{background:var(--ink);padding-top:11pt;padding-bottom:8pt}
+.night .label{color:var(--brass-lit);border-bottom-color:var(--night-rule-2)}
+.grid{display:grid;grid-template-columns:1fr 1.55fr 1.1fr;gap:0 12pt;margin-top:2pt}
+.datum{padding:4.6pt 0 3.6pt;border-bottom:.36pt solid var(--night-rule)}
+.datum.wide{grid-column:1 / -1}
+.datum dt{font-family:"Archivo";font-weight:600;font-size:4.8pt;letter-spacing:.72pt;color:var(--mute);text-transform:uppercase}
+.datum dd{font-family:"JetBrains Mono";font-size:5.4pt;letter-spacing:0;white-space:nowrap;color:var(--paper);margin-top:2.6pt}
+
+.foot{padding-top:7pt;padding-bottom:8pt}
+.foot .ins{font-size:6.24pt;color:var(--slate)}
+.foot .row{display:flex;justify-content:space-between;margin-top:5.5pt;font-family:"JetBrains Mono";font-weight:600;font-size:5.28pt}
+.foot .row .l{letter-spacing:.86pt;color:var(--brass)}
+.foot .row .r{letter-spacing:.38pt;color:var(--slate)}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="pad">
+    <div class="head">
+      <div class="brand">
+        <svg viewBox="0 0 77 77" aria-hidden="true">
+          <path d="M 4.624,4.624 L 53.173,4.624 L 72.438,23.889 L 72.438,72.438 L 4.624,72.438 Z" fill="none" stroke="#17150F" stroke-width="5.78"/>
+          <path d="M 19.265,25.43 L 54.714,25.43" stroke="#17150F" stroke-width="5.78"/>
+          <path d="M 30.054,38.531 L 61.649,38.531" stroke="#966D22" stroke-width="5.78"/>
+          <path d="M 19.265,51.631 L 44.696,51.631" stroke="#17150F" stroke-width="5.78"/>
+        </svg>
+        <div>
+          <div class="name">AKETEC</div>
+          <div class="tag">AI · DATA · MODERNIZATION</div>
+        </div>
+      </div>
+      <div class="doc">
+        <div class="t">CAPABILITY STATEMENT</div>
+        <div class="c"><a href="https://aketec.com">www.aketec.com</a> · <a href="mailto:info@aketec.com">info@aketec.com</a><br>+1 (240) 495-8592</div>
+      </div>
+    </div>
+
+    <p class="lede">Practical AI, automation and data systems for Texas organizations.</p>
+    <p class="intro">AKETEC is a Texas engineering firm serving businesses and the public agencies and prime contractors that support them. We build the AI operations that handle repetitive administrative work, modernize the fragmented data underneath it, and help government and public organizations adopt AI and legacy systems responsibly. Every engagement begins with a fixed-price assessment that quantifies current cost before any build is proposed. All work is performed in the United States by US persons.</p>
+
+    <div class="sec">
+      <div class="label">Core competencies</div>
+      <div class="comps">
+        <div class="comp">
+          <h3>AI Operations &amp; Automation</h3>
+          <ul>
+            <li>AI voice reception, intake and scheduling automation</li>
+            <li>Workflow automation and system-to-system integration</li>
+            <li>Internal AI assistants and document intelligence</li>
+          </ul>
+        </div>
+        <div class="comp">
+          <h3>Data Modernization &amp; Intelligence</h3>
+          <ul>
+            <li>Data migration, SQL/database modernization and ETL pipelines</li>
+            <li>System integration and AI-ready data architecture</li>
+            <li>Business intelligence, dashboards and reporting</li>
+          </ul>
+        </div>
+        <div class="comp">
+          <h3>Public Sector Modernization</h3>
+          <ul>
+            <li>Legacy application modernization and migration</li>
+            <li>AI system inventories and data governance</li>
+            <li>Audit-ready delivery from assessment through implementation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="label">Company experience — platforms &amp; client work</div>
+      <div class="exp">
+        <div class="block">
+          <h4>Built &amp; operated by AKETEC — in production</h4>
+          <p class="item"><b>Alkebuleum Network.</b> Production distributed-ledger network designed, built and operated by AKETEC; tamper-evident, independently verifiable records. <a class="url" href="https://alkescan.com">alkescan.com</a></p>
+          <p class="item"><b>Nuru.</b> Production mobile platform on Google Play and the App Store: secure digital wallet with user-held keys, communities, messaging and AI assistance. <a class="url" href="https://nuru.si">nuru.si</a></p>
+          <p class="item"><b>JollofSwap.</b> Digital-asset exchange running on the Alkebuleum network; users hold their own keys throughout. <a class="url" href="https://jollofswap.com">jollofswap.com</a></p>
+          <p class="item"><b>AlkéScan.</b> Ledger explorer: continuous ingestion, validation and indexing of every transaction on the live network — a public audit trail. <a class="url" href="https://alkescan.com">alkescan.com</a></p>
+        </div>
+        <div>
+          <div class="block">
+            <h4>Client work</h4>
+            <p class="item"><b>Liberian Association of Austin Texas (LAAT).</b> Designed, built and manages the nonprofit's platform: membership tiers and dues, events and RSVPs, scholarship and welfare programs, a financial transparency portal and a member workspace. <a class="url" href="https://laataustin.org">laataustin.org</a></p>
+          </div>
+          <div class="block">
+            <h4>Open source</h4>
+            <p class="item">Contributions in digital ledger technology and sovereign AI, including Nuru Sovereign Runtime, AlkeLedger and AmVault Connect. Our code is public because our claims should be checkable. <a class="url" href="https://github.com/aketec-systems">github.com/aketec-systems</a> · <a class="url" href="https://github.com/Alkebuleum">github.com/Alkebuleum</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="label">Differentiators</div>
+      <ul class="diffs">
+        <li><span><b>Senior engineers deliver the work.</b>The engineer who assesses your systems builds the fix. Nothing is handed to a junior bench after award.</span></li>
+        <li><span><b>We quantify before we recommend.</b>Automation is easy to sell and easy to get wrong. Every recommendation rests on measured current cost.</span></li>
+        <li><span><b>Fixed price, fixed scope, documented deliverable.</b>Priced and bounded before we start. Growth in scope becomes a new engagement, not an open clock.</span></li>
+        <li><span><b>Deliverables written to your frameworks.</b>Output is formatted against the modernization and governance frameworks your agency already reports under.</span></li>
+        <li><span><b>US-based delivery, US persons only.</b>No offshore development and no subcontracted delivery to unnamed third parties.</span></li>
+      </ul>
+    </div>
+
+    <div class="sec">
+      <div class="label">Key personnel</div>
+      <p class="who">Ernesto D. Herbert, Founder / CEO — M.S. Data Science, George Washington University. MCSE: Data Platform · Oracle Database Administrator · ITIL v3. Fifteen years engineering data systems across healthcare, aerospace, telecommunications, and political technology.</p>
+      <p class="prior">Founder's prior experience — performed in previous roles, before AKETEC</p>
+      <div class="boxes">
+        <div class="box">
+          <h4>Automation in production</h4>
+          <p>Automated client data onboarding and SQL transformation workflows at a national political-data platform, cutting manual processing time 30% and accelerating client go-live timelines.</p>
+        </div>
+        <div class="box">
+          <h4>Regulated data, fully auditable</h4>
+          <p>Reconciliation and data-quality systems for Medicare reimbursement data (APC, DRG, ESRD, ASC) achieving 100% auditability across complex regulatory datasets.</p>
+        </div>
+        <div class="box">
+          <h4>Legacy modernization at scale</h4>
+          <p>Star-schema warehouses and SSIS/SSRS pipelines integrating mainframe and non-mainframe systems for aerospace production analytics; multi-terabyte Oracle and SQL Server administration.</p>
+        </div>
+        <div class="box">
+          <h4>Records integrity engineering</h4>
+          <p>Introduced hashing and audit-trail mechanisms into enterprise ETL pipelines; architected a Hyperledger Besu distributed-ledger network with zero-knowledge identity verification for verifiable, immutable records.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+  <div class="night">
+    <div class="pad">
+      <div class="label">Corporate data</div>
+      <dl class="grid">
+        <div class="datum"><dt>Registered legal entity</dt><dd>Alkebuleum Technology LLC</dd></div>
+        <div class="datum"><dt>Business type</dt><dd>Small business · LLC · State of Texas · Est. 2024</dd></div>
+        <div class="datum"><dt>Operating name</dt><dd>AKETEC (DBA, State of Texas)</dd></div>
+        <div class="datum"><dt>Unique Entity ID (UEI)</dt><dd>P97FZE6L9LK7</dd></div>
+        <div class="datum"><dt>Registrations</dt><dd>SAM.gov registration active · Texas CMBL registered</dd></div>
+        <div class="datum"><dt>CAGE code</dt><dd>258P2</dd></div>
+        <div class="datum"><dt>Principal office</dt><dd>Hutto, Texas 78634</dd></div>
+        <div class="datum"><dt>NAICS</dt><dd>541511 (primary) · 541512 · 541519 · 541611 · 541690 · 518210</dd></div>
+        <div class="datum"><dt>PSC</dt><dd>DA01 · DF01 · DJ01 · DC01</dd></div>
+        <div class="datum"><dt>Coverage</dt><dd>Central Texas on-site · Nationwide remote</dd></div>
+        <div class="datum"><dt>Contract types</dt><dd>Firm-fixed-price · Labor-hour · T&amp;M · Prime or subcontractor</dd></div>
+        <div class="datum"><dt>Point of contact</dt><dd>Ernesto Herbert, Founder / CEO · <a href="mailto:info@aketec.com">info@aketec.com</a></dd></div>
+        <div class="datum wide"><dt>GitHub</dt><dd><a href="https://github.com/aketec-systems">github.com/aketec-systems</a> · <a href="https://github.com/Alkebuleum">github.com/Alkebuleum</a></dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="pad foot">
+    <p class="ins">Insurance: general liability, professional liability (E&amp;O), and cyber liability bound prior to contract award. Certificates furnished on request.</p>
+    <div class="row"><span class="l">SMALL BUSINESS · TEXAS · US PERSONS ONLY</span><a class="r" href="https://aketec.com">www.aketec.com</a></div>
+  </div>
+
+</div>
+</body>
+</html>
